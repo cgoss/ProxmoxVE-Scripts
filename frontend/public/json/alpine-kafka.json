@@ -9,7 +9,7 @@
   "ram": 2048,
   "disk": 8,
   "os": "alpine",
-  "version": "3.20",
+  "version": "3.22",
   "unprivileged": 1,
   "ports": ["9092", "9093"],
   "website": "https://kafka.apache.org/",

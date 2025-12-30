@@ -1,0 +1,64 @@
+{
+  "name": "Alpine-Kafka",
+  "description": "Apache Kafka with KRaft mode - a distributed event streaming platform that lets you publish, subscribe to, store, and process streams of events in real-time. This installation uses KRaft (Kafka Raft) mode, eliminating the need for Zookeeper.",
+  "category": "messaging",
+  "tags": ["alpine", "messaging", "streaming", "bigdata", "kraft"],
+  "script": "alpine-kafka.sh",
+  "install": "alpine-kafka-install.sh",
+  "cpu": 2,
+  "ram": 2048,
+  "disk": 8,
+  "os": "alpine",
+  "version": "3.20",
+  "unprivileged": 1,
+  "ports": ["9092", "9093"],
+  "website": "https://kafka.apache.org/",
+  "documentation": "https://kafka.apache.org/documentation/",
+  "github": "https://github.com/apache/kafka",
+  "dockerhub": "",
+  "features": [
+    "Distributed event streaming",
+    "High throughput",
+    "Fault tolerant",
+    "Scalable",
+    "Real-time data processing",
+    "KRaft mode (no Zookeeper required)",
+    "Single-node cluster configuration"
+  ],
+  "requirements": [
+    "Minimum 2GB RAM recommended",
+    "8GB disk space recommended",
+    "2 CPU cores recommended",
+    "Kafka 3.0.0+ required for KRaft mode"
+  ],
+  "notes": [
+    "This installation uses KRaft mode, eliminating Zookeeper dependency",
+    "Port 9092 for Kafka broker, 9093 for controller",
+    "Single-node cluster configuration for simplicity",
+    "For production multi-node clusters, additional configuration needed",
+    "First broker in a KRaft-based cluster",
+    "Use kafka-topics.sh to create and manage topics"
+  ],
+  "commands": [
+    {
+      "description": "List all topics",
+      "command": "kafka-topics.sh --bootstrap-server ${IP}:9092 --list"
+    },
+    {
+      "description": "Create a new topic",
+      "command": "kafka-topics.sh --bootstrap-server ${IP}:9092 --create --topic mytopic --partitions 3 --replication-factor 1"
+    },
+    {
+      "description": "Start a console producer",
+      "command": "kafka-console-producer.sh --bootstrap-server ${IP}:9092 --topic mytopic"
+    },
+    {
+      "description": "Start a console consumer",
+      "command": "kafka-console-consumer.sh --bootstrap-server ${IP}:9092 --topic mytopic --from-beginning"
+    },
+    {
+      "description": "Check broker API versions",
+      "command": "kafka-broker-api-versions.sh --bootstrap-server ${IP}:9092"
+    }
+  ]
+}

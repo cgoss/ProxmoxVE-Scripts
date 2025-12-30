@@ -1,0 +1,35 @@
+Alpine-Kafka
+Apache Kafka is a distributed event streaming platform that lets you publish, subscribe to, store, and process streams of events in real-time. This installation uses KRaft (Kafka Raft) mode, eliminating the need for Zookeeper.
+https://kafka.apache.org/
+https://kafka.apache.org/documentation/
+https://github.com/apache/kafka
+
+# Tags
+alpine;messaging;streaming;bigdata;kraft
+
+# Defaults
+2
+2048
+8
+alpine
+3.20
+1
+
+# Ports
+9092
+9093
+
+# Commands
+kafka-topics.sh --bootstrap-server ${IP}:9092 --list
+kafka-topics.sh --bootstrap-server ${IP}:9092 --create --topic mytopic --partitions 3 --replication-factor 1
+kafka-console-producer.sh --bootstrap-server ${IP}:9092 --topic mytopic
+kafka-console-consumer.sh --bootstrap-server ${IP}:9092 --topic mytopic --from-beginning
+kafka-broker-api-versions.sh --bootstrap-server ${IP}:9092
+
+# Notes
+This installation uses KRaft mode, eliminating Zookeeper dependency
+Port 9092 for Kafka broker, 9093 for controller
+Single-node cluster configuration for simplicity
+For production multi-node clusters, additional configuration needed
+First broker in a KRaft-based cluster
+Use kafka-topics.sh to create and manage topics

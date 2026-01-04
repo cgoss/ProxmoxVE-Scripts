@@ -1,0 +1,33 @@
+# UniFi Network Server Context
+
+## Basic Information
+
+- **Name**: UniFi Network Server
+- **Slug**: unifi
+- **Categories**: 4
+
+## Description
+
+UniFi Network Server is a software that helps manage and monitor UniFi networks (Wi-Fi, Ethernet, etc.) by providing an intuitive user interface and advanced features. It allows network administrators to configure, monitor, and upgrade network devices, as well as view network statistics, client devi
+
+## Resources by Install Method
+
+### Default Install
+- **CPU**: 2 cores
+- **RAM**: 2048 MB (2 GB)
+- **Disk**: 8 GB
+- **OS**: Debian 12
+- **Privileged**: true
+- **Updateable**: Yes
+
+## Access Information
+
+- **Interface Port**: 8443
+- **Web URL**: https://www.ui.com/
+- **Documentation**: https://help.ui.com/hc/en-us/articles/360012282453-Self-Hosting-a-UniFi-Network-Server
+- **Configuration Path**: 
+
+## OS Support
+
+- **Debian 12/13**: Full package ecosystem, best compatibility
+- **Ubuntu 22.04/24.04**: Latest software, 9-month support cycle

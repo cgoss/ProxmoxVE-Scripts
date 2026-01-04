@@ -1,0 +1,41 @@
+# Transmission Context
+
+## Basic Information
+
+- **Name**: Transmission
+- **Slug**: transmission
+- **Categories**: 11
+
+## Description
+
+Transmission is a free, open-source BitTorrent client known for its fast download speeds and ease of use. It supports various platforms such as Windows, Linux, and macOS and has features like web interface, peer exchange, and encrypted transfers.
+
+## Resources by Install Method
+
+### Default Install
+- **CPU**: 2 cores
+- **RAM**: 2048 MB (2 GB)
+- **Disk**: 8 GB
+- **OS**: Debian 13
+- **Privileged**: true
+- **Updateable**: Yes
+
+### Alpine Install
+- **CPU**: 1 core (typical for Alpine)
+- **RAM**: 512 MB (1024 MB = 1 GB) - Alpine typically uses ~50% less RAM
+- **Disk**: 2 GB (typical for Alpine)
+- **OS**: Alpine 13
+- **Privileged**: true
+- **Updateable**: Yes
+
+## Access Information
+
+- **Interface Port**: 9091
+- **Web URL**: https://transmissionbt.com/
+- **Documentation**: https://github.com/transmission/transmission/blob/main/docs/README.md
+- **Configuration Path**: Debian `/etc/transmission-daemon/settings.json` | Alpine `/var/lib/transmission/config/settings.json`
+
+## OS Support
+
+- **Debian 12/13**: Full package ecosystem, best compatibility
+- **Ubuntu 22.04/24.04**: Latest software, 9-month support cycle

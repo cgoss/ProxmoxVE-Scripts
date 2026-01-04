@@ -1,0 +1,33 @@
+# Memos Context
+
+## Basic Information
+
+- **Name**: Memos
+- **Slug**: memos
+- **Categories**: 12
+
+## Description
+
+Memos is an open-source, self-hosted platform designed for fast, privacy-focused note-taking. Users can create, organize, and format notes with Markdown, which are securely stored in a local database. It’s lightweight and customizable, built for quick access and adaptability to individual or team ne
+
+## Resources by Install Method
+
+### Default Install
+- **CPU**: 1 cores
+- **RAM**: 1024 MB (1 GB)
+- **Disk**: 3 GB
+- **OS**: Debian 13
+- **Privileged**: true
+- **Updateable**: Yes
+
+## Access Information
+
+- **Interface Port**: 9030
+- **Web URL**: https://www.usememos.com/
+- **Documentation**: https://www.usememos.com/docs
+- **Configuration Path**: 
+
+## OS Support
+
+- **Debian 12/13**: Full package ecosystem, best compatibility
+- **Ubuntu 22.04/24.04**: Latest software, 9-month support cycle

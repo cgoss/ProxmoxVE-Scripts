@@ -1,0 +1,26 @@
+# openziti-tunnel Context
+
+## Basic Information
+
+- **Name**: openziti-tunnel
+- **Slug**: openziti-tunnel
+- **Categories**: 4
+
+## Description
+
+OpenZiti is an open-source, zero trust networking platform that enables secure connectivity between applications, services, and devices. It provides secure, encrypted connections between clients and services, and can be used to create secure, zero trust networks.
+
+## Resources by Install Method
+
+### Default Install
+- **CPU**: 1 cores
+- **RAM**: 512 MB (0 GB)
+- **Disk**: 2 GB
+- **OS**: Ubuntu 24.04
+- **Privileged**: true
+- **Updateable**: Yes
+
+## OS Support
+
+- **Debian 12/13**: Full package ecosystem, best compatibility
+- **Ubuntu 22.04/24.04**: Latest software, 9-month support cycle

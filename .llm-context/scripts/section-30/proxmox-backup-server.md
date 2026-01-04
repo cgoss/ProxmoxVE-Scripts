@@ -1,0 +1,33 @@
+# Proxmox Backup Server (PBS) Context
+
+## Basic Information
+
+- **Name**: Proxmox Backup Server (PBS)
+- **Slug**: proxmox-backup-server
+- **Categories**: 1
+
+## Description
+
+Proxmox Backup Server is an enterprise backup solution, for backing up and restoring VMs, containers, and physical hosts. By supporting incremental, fully deduplicated backups, Proxmox Backup Server significantly reduces network load and saves valuable storage space.
+
+## Resources by Install Method
+
+### Default Install
+- **CPU**: 2 cores
+- **RAM**: 2048 MB (2 GB)
+- **Disk**: 10 GB
+- **OS**: Debian 13
+- **Privileged**: true
+- **Updateable**: Yes
+
+## Access Information
+
+- **Interface Port**: 8007
+- **Web URL**: https://www.proxmox.com/en/proxmox-backup-server/overview
+- **Documentation**: https://pbs.proxmox.com/docs/
+- **Configuration Path**: 
+
+## OS Support
+
+- **Debian 12/13**: Full package ecosystem, best compatibility
+- **Ubuntu 22.04/24.04**: Latest software, 9-month support cycle

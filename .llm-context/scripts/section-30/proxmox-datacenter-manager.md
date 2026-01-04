@@ -1,0 +1,33 @@
+# Proxmox Datacenter Manager (PDM) Context
+
+## Basic Information
+
+- **Name**: Proxmox Datacenter Manager (PDM)
+- **Slug**: proxmox-datacenter-manager
+- **Categories**: 1
+
+## Description
+
+The Proxmox Datacenter Manager project has been developed with the objective of providing a centralized overview of all your individual nodes and clusters. It also enables basic management like migrations of virtual guests without any cluster network requirements. 
+
+## Resources by Install Method
+
+### Default Install
+- **CPU**: 2 cores
+- **RAM**: 2048 MB (2 GB)
+- **Disk**: 10 GB
+- **OS**: Debian 13
+- **Privileged**: true
+- **Updateable**: Yes
+
+## Access Information
+
+- **Interface Port**: 8443
+- **Web URL**: https://pve.proxmox.com/wiki/Proxmox_Datacenter_Manager_Roadmap
+- **Documentation**: https://pve.proxmox.com/wiki/Proxmox_Datacenter_Manager_Roadmap
+- **Configuration Path**: 
+
+## OS Support
+
+- **Debian 12/13**: Full package ecosystem, best compatibility
+- **Ubuntu 22.04/24.04**: Latest software, 9-month support cycle

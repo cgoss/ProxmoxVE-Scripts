@@ -14,7 +14,7 @@ alpine-bitmagnet service
 
 ### Default Install
 - **CPU**: 2 cores
-- **RAM**: 1024 MB (1 GB)
+- **RAM**: 1024 MB (1.0 GB)
 - **Disk**: 3 GB
 - **OS**: Alpine 3.22
 - **Privileged**: true

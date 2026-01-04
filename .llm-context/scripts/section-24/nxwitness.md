@@ -14,7 +14,7 @@ Nx Witness is a professional video management system (VMS) designed for IP camer
 
 ### Default Install
 - **CPU**: 2 cores
-- **RAM**: 2048 MB (2 GB)
+- **RAM**: 2048 MB (2.0 GB)
 - **Disk**: 8 GB
 - **OS**: Ubuntu 24.04
 - **Privileged**: false
@@ -29,6 +29,7 @@ Nx Witness is a professional video management system (VMS) designed for IP camer
 
 
 ## Special Requirements
+
 - **GPU Passthrough**: Required for this service
 
 ## OS Support

@@ -14,7 +14,7 @@ ComfyUI is a node-based interface and inference engine for generative AI. Users 
 
 ### Default Install
 - **CPU**: 4 cores
-- **RAM**: 8192 MB (8 GB)
+- **RAM**: 8192 MB (8.0 GB)
 - **Disk**: 25 GB
 - **OS**: Debian 13
 - **Privileged**: true
@@ -29,6 +29,7 @@ ComfyUI is a node-based interface and inference engine for generative AI. Users 
 
 
 ## Special Requirements
+
 - **GPU Passthrough**: Required for this service
 
 ## OS Support

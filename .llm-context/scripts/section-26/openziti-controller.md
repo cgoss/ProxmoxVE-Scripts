@@ -14,7 +14,7 @@ OpenZiti is an open-source, zero trust networking platform that enables secure c
 
 ### Default Install
 - **CPU**: 2 cores
-- **RAM**: 1024 MB (1 GB)
+- **RAM**: 1024 MB (1.0 GB)
 - **Disk**: 8 GB
 - **OS**: Debian 13
 - **Privileged**: true

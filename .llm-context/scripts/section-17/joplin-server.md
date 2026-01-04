@@ -14,7 +14,7 @@ Joplin - the privacy-focused note taking app with sync capabilities for Windows,
 
 ### Default Install
 - **CPU**: 2 cores
-- **RAM**: 6144 MB (6 GB)
+- **RAM**: 6144 MB (6.0 GB)
 - **Disk**: 20 GB
 - **OS**: Debian 13
 - **Privileged**: true

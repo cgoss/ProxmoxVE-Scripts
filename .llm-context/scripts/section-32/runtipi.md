@@ -14,7 +14,7 @@ Runtipi lets you install all your favorite self-hosted apps without the hassle o
 
 ### Default Install
 - **CPU**: 2 cores
-- **RAM**: 2048 MB (2 GB)
+- **RAM**: 2048 MB (2.0 GB)
 - **Disk**: 8 GB
 - **OS**: Debian 13
 - **Privileged**: true

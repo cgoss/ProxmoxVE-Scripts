@@ -14,7 +14,7 @@ Reitti is a self-hosted location tracking and analysis platform that detects sig
 
 ### Default Install
 - **CPU**: 2 cores
-- **RAM**: 4096 MB (4 GB)
+- **RAM**: 4096 MB (4.0 GB)
 - **Disk**: 15 GB
 - **OS**: Debian 13
 - **Privileged**: true

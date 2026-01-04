@@ -14,7 +14,7 @@ FreshRSS is a self-hosted RSS and Atom feed aggregator that lets users collect, 
 
 ### Default Install
 - **CPU**: 2 cores
-- **RAM**: 1024 MB (1 GB)
+- **RAM**: 1024 MB (1.0 GB)
 - **Disk**: 4 GB
 - **OS**: Debian 12
 - **Privileged**: true

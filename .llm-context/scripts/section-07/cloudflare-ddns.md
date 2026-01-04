@@ -14,7 +14,7 @@ A feature-rich and robust Cloudflare DDNS updater with a small footprint. The pr
 
 ### Default Install
 - **CPU**: 2 cores
-- **RAM**: 1024 MB (1 GB)
+- **RAM**: 1024 MB (1.0 GB)
 - **Disk**: 3 GB
 - **OS**: Debian 12
 - **Privileged**: true

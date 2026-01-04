@@ -14,7 +14,7 @@ FlowiseAI is an open source low-code tool for developers to build customized LLM
 
 ### Default Install
 - **CPU**: 4 cores
-- **RAM**: 4096 MB (4 GB)
+- **RAM**: 4096 MB (4.0 GB)
 - **Disk**: 10 GB
 - **OS**: Debian 12
 - **Privileged**: true

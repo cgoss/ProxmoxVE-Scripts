@@ -14,7 +14,7 @@ A modern web-based management interface for Proxmox VE (PVE) helper scripts. Thi
 
 ### Default Install
 - **CPU**: 2 cores
-- **RAM**: 4096 MB (4 GB)
+- **RAM**: 4096 MB (4.0 GB)
 - **Disk**: 4 GB
 - **OS**: Debian 13
 - **Privileged**: true

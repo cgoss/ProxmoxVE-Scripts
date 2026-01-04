@@ -14,7 +14,7 @@ Zigbee2MQTT is an open-source software project that allows you to use Zigbee-bas
 
 ### Default Install
 - **CPU**: 2 cores
-- **RAM**: 1024 MB (1 GB)
+- **RAM**: 1024 MB (1.0 GB)
 - **Disk**: 5 GB
 - **OS**: Debian 13
 - **Privileged**: false
@@ -22,7 +22,7 @@ Zigbee2MQTT is an open-source software project that allows you to use Zigbee-bas
 
 ### Alpine Install
 - **CPU**: 1 core (typical for Alpine)
-- **RAM**: 512 MB (512 MB = 0 GB) - Alpine typically uses ~50% less RAM
+- **RAM**: 512 MB (512 MB = 0.5 GB) - Alpine typically uses ~50% less RAM
 - **Disk**: 2 GB (typical for Alpine)
 - **OS**: Alpine 13
 - **Privileged**: false

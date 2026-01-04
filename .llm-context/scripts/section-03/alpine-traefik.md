@@ -14,7 +14,7 @@ alpine-traefik service
 
 ### Default Install
 - **CPU**: 1 cores
-- **RAM**: 512 MB (0 GB)
+- **RAM**: 512 MB (0.5 GB)
 - **Disk**: 1 GB
 - **OS**: Alpine 3.22
 - **Privileged**: true

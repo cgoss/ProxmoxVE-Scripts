@@ -14,7 +14,7 @@ NodeBB Forum Software is powered by Node.js and supports either Redis, MongoDB, 
 
 ### Default Install
 - **CPU**: 4 cores
-- **RAM**: 2048 MB (2 GB)
+- **RAM**: 2048 MB (2.0 GB)
 - **Disk**: 10 GB
 - **OS**: Ubuntu 24.04
 - **Privileged**: true

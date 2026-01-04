@@ -14,7 +14,7 @@ OpenMediaVault is a next-generation network-attached storage (NAS) solution base
 
 ### Default Install
 - **CPU**: 2 cores
-- **RAM**: 1024 MB (1 GB)
+- **RAM**: 1024 MB (1.0 GB)
 - **Disk**: 4 GB
 - **OS**: Debian 12
 - **Privileged**: true

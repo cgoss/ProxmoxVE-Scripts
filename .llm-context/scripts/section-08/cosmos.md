@@ -14,7 +14,7 @@ Cosmos Cloud is a self-hosting platform that automates maintenance and security.
 
 ### Default Install
 - **CPU**: 2 cores
-- **RAM**: 2048 MB (2 GB)
+- **RAM**: 2048 MB (2.0 GB)
 - **Disk**: 8 GB
 - **OS**: Debian 13
 - **Privileged**: true
@@ -29,6 +29,7 @@ Cosmos Cloud is a self-hosting platform that automates maintenance and security.
 
 
 ## Special Requirements
+
 - **FUSE Support**: Required for this service
 
 ## OS Support

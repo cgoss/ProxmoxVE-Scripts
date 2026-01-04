@@ -14,7 +14,7 @@ SilverBullet is a note-taking application optimized for people with a hacker min
 
 ### Default Install
 - **CPU**: 1 cores
-- **RAM**: 512 MB (0 GB)
+- **RAM**: 512 MB (0.5 GB)
 - **Disk**: 2 GB
 - **OS**: Debian 13
 - **Privileged**: true

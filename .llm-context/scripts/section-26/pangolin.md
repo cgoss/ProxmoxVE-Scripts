@@ -14,7 +14,7 @@ Pangolin securely routes traffic over WireGuard tunnels to any private network. 
 
 ### Default Install
 - **CPU**: 2 cores
-- **RAM**: 4096 MB (4 GB)
+- **RAM**: 4096 MB (4.0 GB)
 - **Disk**: 5 GB
 - **OS**: Debian 13
 - **Privileged**: true
@@ -29,6 +29,7 @@ Pangolin securely routes traffic over WireGuard tunnels to any private network. 
 
 
 ## Special Requirements
+
 - **TUN/TAP Support**: Required for this service
 
 ## OS Support

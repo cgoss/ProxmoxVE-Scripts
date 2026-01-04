@@ -14,7 +14,7 @@ A simple, self-hosted app for your checklists and notes. Tired of bloated, cloud
 
 ### Default Install
 - **CPU**: 2 cores
-- **RAM**: 3072 MB (3 GB)
+- **RAM**: 3072 MB (3.0 GB)
 - **Disk**: 6 GB
 - **OS**: Debian 13
 - **Privileged**: true

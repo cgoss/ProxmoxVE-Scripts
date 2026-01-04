@@ -14,7 +14,7 @@ LLM proxy to call 100+ LLMs in a unified interface & track spend, set budgets pe
 
 ### Default Install
 - **CPU**: 2 cores
-- **RAM**: 2048 MB (2 GB)
+- **RAM**: 2048 MB (2.0 GB)
 - **Disk**: 4 GB
 - **OS**: Debian 13
 - **Privileged**: true

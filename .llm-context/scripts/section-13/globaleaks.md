@@ -14,7 +14,7 @@ GlobaLeaks is a free and open-source whistleblowing software enabling anyone to 
 
 ### Default Install
 - **CPU**: 2 cores
-- **RAM**: 1024 MB (1 GB)
+- **RAM**: 1024 MB (1.0 GB)
 - **Disk**: 4 GB
 - **OS**: Debian 13
 - **Privileged**: true

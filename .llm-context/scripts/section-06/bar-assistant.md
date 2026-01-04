@@ -14,7 +14,7 @@ Bar Assistant is all-in-one solution for managing your home bar. Compared to oth
 
 ### Default Install
 - **CPU**: 2 cores
-- **RAM**: 2048 MB (2 GB)
+- **RAM**: 2048 MB (2.0 GB)
 - **Disk**: 4 GB
 - **OS**: Debian 12
 - **Privileged**: true

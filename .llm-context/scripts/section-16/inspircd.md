@@ -14,7 +14,7 @@ InspIRCd is a modular C++ Internet Relay Chat (IRC) server for UNIX-like and Win
 
 ### Default Install
 - **CPU**: 1 cores
-- **RAM**: 512 MB (0 GB)
+- **RAM**: 512 MB (0.5 GB)
 - **Disk**: 2 GB
 - **OS**: Debian 13
 - **Privileged**: true

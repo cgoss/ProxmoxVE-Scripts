@@ -14,7 +14,7 @@ OpenWebUI is a self-hosted, web-based interface that allows you to run AI models
 
 ### Default Install
 - **CPU**: 4 cores
-- **RAM**: 8192 MB (8 GB)
+- **RAM**: 8192 MB (8.0 GB)
 - **Disk**: 25 GB
 - **OS**: Debian 13
 - **Privileged**: true
@@ -29,6 +29,7 @@ OpenWebUI is a self-hosted, web-based interface that allows you to run AI models
 
 
 ## Special Requirements
+
 - **GPU Passthrough**: Required for this service
 
 ## OS Support

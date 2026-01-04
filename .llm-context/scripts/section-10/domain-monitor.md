@@ -14,7 +14,7 @@ A self-hosted PHP domain expiration monitoring tool that tracks domain expiry da
 
 ### Default Install
 - **CPU**: 2 cores
-- **RAM**: 512 MB (0 GB)
+- **RAM**: 512 MB (0.5 GB)
 - **Disk**: 2 GB
 - **OS**: Debian 13
 - **Privileged**: true

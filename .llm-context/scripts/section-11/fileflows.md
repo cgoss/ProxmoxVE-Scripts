@@ -14,7 +14,7 @@ FileFlows is a powerful, open-source tool for automating media file processing w
 
 ### Default Install
 - **CPU**: 2 cores
-- **RAM**: 2048 MB (2 GB)
+- **RAM**: 2048 MB (2.0 GB)
 - **Disk**: 8 GB
 - **OS**: Debian 12
 - **Privileged**: true
@@ -29,6 +29,7 @@ FileFlows is a powerful, open-source tool for automating media file processing w
 
 
 ## Special Requirements
+
 - **GPU Passthrough**: Required for this service
 
 ## OS Support

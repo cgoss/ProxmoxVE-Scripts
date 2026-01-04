@@ -14,7 +14,7 @@ Prowlarr is a software tool designed to integrate with various PVR (Personal Vid
 
 ### Default Install
 - **CPU**: 2 cores
-- **RAM**: 1024 MB (1 GB)
+- **RAM**: 1024 MB (1.0 GB)
 - **Disk**: 4 GB
 - **OS**: Debian 13
 - **Privileged**: true

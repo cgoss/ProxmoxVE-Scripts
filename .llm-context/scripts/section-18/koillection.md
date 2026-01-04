@@ -14,7 +14,7 @@ Koillection is a self-hosted collection manager created to keep track of physica
 
 ### Default Install
 - **CPU**: 2 cores
-- **RAM**: 1024 MB (1 GB)
+- **RAM**: 1024 MB (1.0 GB)
 - **Disk**: 8 GB
 - **OS**: Debian 13
 - **Privileged**: true

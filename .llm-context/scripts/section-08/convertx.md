@@ -14,7 +14,7 @@ ConvertX is a self-hosted online file converter supporting over 1000 formats, in
 
 ### Default Install
 - **CPU**: 2 cores
-- **RAM**: 4096 MB (4 GB)
+- **RAM**: 4096 MB (4.0 GB)
 - **Disk**: 20 GB
 - **OS**: Debian 12
 - **Privileged**: true
@@ -29,6 +29,7 @@ ConvertX is a self-hosted online file converter supporting over 1000 formats, in
 
 
 ## Special Requirements
+
 - **GPU Passthrough**: Required for this service
 
 ## OS Support

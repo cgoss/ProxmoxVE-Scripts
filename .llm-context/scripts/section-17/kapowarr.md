@@ -14,7 +14,7 @@ Kapowarr allows you to build a digital library of comics. You can add volumes, m
 
 ### Default Install
 - **CPU**: 1 cores
-- **RAM**: 256 MB (0 GB)
+- **RAM**: 256 MB (0.2 GB)
 - **Disk**: 2 GB
 - **OS**: Debian 13
 - **Privileged**: true

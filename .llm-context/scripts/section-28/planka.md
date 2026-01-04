@@ -14,7 +14,7 @@ Planka is a powerful, project management platform that transforms how teams coll
 
 ### Default Install
 - **CPU**: 1 cores
-- **RAM**: 1024 MB (1 GB)
+- **RAM**: 1024 MB (1.0 GB)
 - **Disk**: 4 GB
 - **OS**: Debian 13
 - **Privileged**: true

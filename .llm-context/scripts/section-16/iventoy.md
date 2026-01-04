@@ -14,7 +14,7 @@ iVentoy is an upgraded PXE server that allows simultaneous OS booting and instal
 
 ### Default Install
 - **CPU**: 1 cores
-- **RAM**: 512 MB (0 GB)
+- **RAM**: 512 MB (0.5 GB)
 - **Disk**: 2 GB
 - **OS**: Debian 13
 - **Privileged**: true

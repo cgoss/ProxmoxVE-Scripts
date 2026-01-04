@@ -14,7 +14,7 @@ Graylog is an open-source log management and analysis platform that centralizes 
 
 ### Default Install
 - **CPU**: 2 cores
-- **RAM**: 8192 MB (8 GB)
+- **RAM**: 8192 MB (8.0 GB)
 - **Disk**: 30 GB
 - **OS**: Debian 13
 - **Privileged**: true

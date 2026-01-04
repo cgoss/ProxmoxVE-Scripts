@@ -14,7 +14,7 @@ Apache Guacamole is a clientless remote desktop gateway. It supports standard pr
 
 ### Default Install
 - **CPU**: 1 cores
-- **RAM**: 2048 MB (2 GB)
+- **RAM**: 2048 MB (2.0 GB)
 - **Disk**: 4 GB
 - **OS**: Debian 13
 - **Privileged**: true

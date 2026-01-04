@@ -14,7 +14,7 @@ Minarca is a self-hosted open source data backup software that allows you to man
 
 ### Default Install
 - **CPU**: 2 cores
-- **RAM**: 4096 MB (4 GB)
+- **RAM**: 4096 MB (4.0 GB)
 - **Disk**: 10 GB
 - **OS**: Debian 13
 - **Privileged**: true
@@ -29,6 +29,7 @@ Minarca is a self-hosted open source data backup software that allows you to man
 
 
 ## Special Requirements
+
 - **FUSE Support**: Required for this service
 
 ## OS Support

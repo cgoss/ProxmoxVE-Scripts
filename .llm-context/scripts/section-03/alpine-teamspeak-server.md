@@ -14,7 +14,7 @@ alpine-teamspeak-server service
 
 ### Default Install
 - **CPU**: 1 cores
-- **RAM**: 256 MB (0 GB)
+- **RAM**: 256 MB (0.2 GB)
 - **Disk**: 2 GB
 - **OS**: Alpine 3.22
 - **Privileged**: true

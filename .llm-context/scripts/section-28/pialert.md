@@ -14,7 +14,7 @@ Pi.Alert is a WIFI / LAN intruder detector. Checks the devices connected and ale
 
 ### Default Install
 - **CPU**: 1 cores
-- **RAM**: 512 MB (0 GB)
+- **RAM**: 512 MB (0.5 GB)
 - **Disk**: 3 GB
 - **OS**: Debian 13
 - **Privileged**: true

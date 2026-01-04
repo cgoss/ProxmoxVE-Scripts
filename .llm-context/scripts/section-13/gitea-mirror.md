@@ -14,7 +14,7 @@ Gitea Mirror auto-syncs GitHub repos to your self-hosted Gitea, with a sleek Web
 
 ### Default Install
 - **CPU**: 2 cores
-- **RAM**: 2048 MB (2 GB)
+- **RAM**: 2048 MB (2.0 GB)
 - **Disk**: 6 GB
 - **OS**: Debian 12
 - **Privileged**: true

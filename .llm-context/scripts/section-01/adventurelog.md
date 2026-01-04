@@ -14,7 +14,7 @@ Adventure Log is an app designed to track outdoor activities and personal achiev
 
 ### Default Install
 - **CPU**: 2 cores
-- **RAM**: 2048 MB (2 GB)
+- **RAM**: 2048 MB (2.0 GB)
 - **Disk**: 7 GB
 - **OS**: Debian 13
 - **Privileged**: true

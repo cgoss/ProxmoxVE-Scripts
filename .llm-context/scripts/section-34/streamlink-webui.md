@@ -14,7 +14,7 @@ a simple web-ui to the well-known streamlink cli application, which allows you t
 
 ### Default Install
 - **CPU**: 2 cores
-- **RAM**: 2048 MB (2 GB)
+- **RAM**: 2048 MB (2.0 GB)
 - **Disk**: 10 GB
 - **OS**: Debian 13
 - **Privileged**: true

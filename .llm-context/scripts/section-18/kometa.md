@@ -14,7 +14,7 @@ Kometa (formerly known as Plex Meta Manager) is a powerful tool designed to give
 
 ### Default Install
 - **CPU**: 2 cores
-- **RAM**: 4096 MB (4 GB)
+- **RAM**: 4096 MB (4.0 GB)
 - **Disk**: 8 GB
 - **OS**: Debian 13
 - **Privileged**: true

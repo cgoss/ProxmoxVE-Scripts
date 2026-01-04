@@ -14,7 +14,7 @@ Alerting with Prometheus is separated into two parts. Alerting rules in Promethe
 
 ### Default Install
 - **CPU**: 1 cores
-- **RAM**: 1024 MB (1 GB)
+- **RAM**: 1024 MB (1.0 GB)
 - **Disk**: 2 GB
 - **OS**: Debian 13
 - **Privileged**: true

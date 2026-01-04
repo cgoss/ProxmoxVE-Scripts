@@ -14,7 +14,7 @@ A self-hosted dashboard that puts all your feeds in one place
 
 ### Default Install
 - **CPU**: 1 cores
-- **RAM**: 512 MB (0 GB)
+- **RAM**: 512 MB (0.5 GB)
 - **Disk**: 2 GB
 - **OS**: Debian 12
 - **Privileged**: true

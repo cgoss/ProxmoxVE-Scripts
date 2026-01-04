@@ -14,7 +14,7 @@ Ollama is a tool that allows you to run large language models locally on your ow
 
 ### Default Install
 - **CPU**: 4 cores
-- **RAM**: 4096 MB (4 GB)
+- **RAM**: 4096 MB (4.0 GB)
 - **Disk**: 35 GB
 - **OS**: Ubuntu 24.04
 - **Privileged**: true
@@ -29,6 +29,7 @@ Ollama is a tool that allows you to run large language models locally on your ow
 
 
 ## Special Requirements
+
 - **GPU Passthrough**: Required for this service
 
 ## OS Support

@@ -14,7 +14,7 @@ Swizzin is a light-weight, modular, and user-friendly seedbox solution for Debia
 
 ### Default Install
 - **CPU**: 2 cores
-- **RAM**: 4096 MB (4 GB)
+- **RAM**: 4096 MB (4.0 GB)
 - **Disk**: 20 GB
 - **OS**: Debian 12
 - **Privileged**: true

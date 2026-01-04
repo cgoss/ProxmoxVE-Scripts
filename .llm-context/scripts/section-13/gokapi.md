@@ -14,7 +14,7 @@ Gokapi is a lightweight server to share files, which expire after a set amount o
 
 ### Default Install
 - **CPU**: 1 cores
-- **RAM**: 512 MB (0 GB)
+- **RAM**: 512 MB (0.5 GB)
 - **Disk**: 4 GB
 - **OS**: Debian 12
 - **Privileged**: true

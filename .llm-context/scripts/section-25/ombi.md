@@ -14,7 +14,7 @@ Ombi is a self-hosted web application designed to empower shared Plex, Emby or J
 
 ### Default Install
 - **CPU**: 1 cores
-- **RAM**: 1024 MB (1 GB)
+- **RAM**: 1024 MB (1.0 GB)
 - **Disk**: 4 GB
 - **OS**: Debian 13
 - **Privileged**: true

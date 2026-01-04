@@ -14,7 +14,7 @@ MediaMTX is a ready-to-use SRT / WebRTC / RTSP / RTMP / LL-HLS media server and 
 
 ### Default Install
 - **CPU**: 2 cores
-- **RAM**: 2048 MB (2 GB)
+- **RAM**: 2048 MB (2.0 GB)
 - **Disk**: 4 GB
 - **OS**: Debian 13
 - **Privileged**: true
@@ -22,6 +22,7 @@ MediaMTX is a ready-to-use SRT / WebRTC / RTSP / RTMP / LL-HLS media server and 
 
 
 ## Special Requirements
+
 - **GPU Passthrough**: Required for this service
 
 ## OS Support

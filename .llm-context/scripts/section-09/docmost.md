@@ -14,7 +14,7 @@ Open-source collaborative wiki and documentation software. Create, collaborate, 
 
 ### Default Install
 - **CPU**: 3 cores
-- **RAM**: 4096 MB (4 GB)
+- **RAM**: 4096 MB (4.0 GB)
 - **Disk**: 8 GB
 - **OS**: Debian 13
 - **Privileged**: true

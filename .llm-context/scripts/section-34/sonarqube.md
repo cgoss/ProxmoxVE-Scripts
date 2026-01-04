@@ -14,7 +14,7 @@ SonarQube Server automates code quality and security reviews and provides action
 
 ### Default Install
 - **CPU**: 4 cores
-- **RAM**: 6144 MB (6 GB)
+- **RAM**: 6144 MB (6.0 GB)
 - **Disk**: 25 GB
 - **OS**: Debian 13
 - **Privileged**: true

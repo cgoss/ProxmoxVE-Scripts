@@ -14,7 +14,7 @@ go2rtc is the ultimate camera streaming application with support RTSP, WebRTC, H
 
 ### Default Install
 - **CPU**: 2 cores
-- **RAM**: 2048 MB (2 GB)
+- **RAM**: 2048 MB (2.0 GB)
 - **Disk**: 4 GB
 - **OS**: Debian 12
 - **Privileged**: true
@@ -29,6 +29,7 @@ go2rtc is the ultimate camera streaming application with support RTSP, WebRTC, H
 
 
 ## Special Requirements
+
 - **GPU Passthrough**: Required for this service
 
 ## OS Support

@@ -14,7 +14,7 @@ Plex personal media server magically scans and organizes your files, sorting you
 
 ### Default Install
 - **CPU**: 2 cores
-- **RAM**: 2048 MB (2 GB)
+- **RAM**: 2048 MB (2.0 GB)
 - **Disk**: 8 GB
 - **OS**: Ubuntu 24.04
 - **Privileged**: true
@@ -29,6 +29,7 @@ Plex personal media server magically scans and organizes your files, sorting you
 
 
 ## Special Requirements
+
 - **GPU Passthrough**: Required for this service
 
 ## OS Support

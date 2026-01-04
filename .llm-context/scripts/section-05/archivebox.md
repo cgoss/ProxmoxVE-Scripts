@@ -14,7 +14,7 @@ ArchiveBox is an open source tool that lets organizations & individuals archive 
 
 ### Default Install
 - **CPU**: 2 cores
-- **RAM**: 1024 MB (1 GB)
+- **RAM**: 1024 MB (1.0 GB)
 - **Disk**: 8 GB
 - **OS**: Debian 12
 - **Privileged**: true

@@ -14,7 +14,7 @@ Omada Controller is a software application used to manage TP-Link's Omada EAP (E
 
 ### Default Install
 - **CPU**: 2 cores
-- **RAM**: 3072 MB (3 GB)
+- **RAM**: 3072 MB (3.0 GB)
 - **Disk**: 8 GB
 - **OS**: Debian 12
 - **Privileged**: true

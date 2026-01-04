@@ -14,7 +14,7 @@ Paperless-GPT seamlessly pairs with paperless-ngx to generate AI-powered documen
 
 ### Default Install
 - **CPU**: 3 cores
-- **RAM**: 2048 MB (2 GB)
+- **RAM**: 2048 MB (2.0 GB)
 - **Disk**: 7 GB
 - **OS**: Debian 13
 - **Privileged**: true

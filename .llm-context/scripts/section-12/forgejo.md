@@ -14,7 +14,7 @@ Forgejo is an open-source, self-hosted Git service that allows individuals and t
 
 ### Default Install
 - **CPU**: 2 cores
-- **RAM**: 2048 MB (2 GB)
+- **RAM**: 2048 MB (2.0 GB)
 - **Disk**: 10 GB
 - **OS**: Debian 13
 - **Privileged**: true
@@ -22,7 +22,7 @@ Forgejo is an open-source, self-hosted Git service that allows individuals and t
 
 ### Alpine Install
 - **CPU**: 1 core (typical for Alpine)
-- **RAM**: 512 MB (1024 MB = 1 GB) - Alpine typically uses ~50% less RAM
+- **RAM**: 512 MB (1024 MB = 1.0 GB) - Alpine typically uses ~50% less RAM
 - **Disk**: 2 GB (typical for Alpine)
 - **OS**: Alpine 13
 - **Privileged**: true

@@ -14,7 +14,7 @@ Kasm Workspaces is a container streaming platform that delivers browser-based ac
 
 ### Default Install
 - **CPU**: 2 cores
-- **RAM**: 8192 MB (8 GB)
+- **RAM**: 8192 MB (8.0 GB)
 - **Disk**: 30 GB
 - **OS**: Debian 13
 - **Privileged**: false
@@ -29,6 +29,7 @@ Kasm Workspaces is a container streaming platform that delivers browser-based ac
 
 
 ## Special Requirements
+
 - **FUSE Support**: Required for this service
 - **TUN/TAP Support**: Required for this service
 

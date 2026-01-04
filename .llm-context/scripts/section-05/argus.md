@@ -14,7 +14,7 @@ Argus will query websites at a user defined interval for new software releases a
 
 ### Default Install
 - **CPU**: 1 cores
-- **RAM**: 256 MB (0 GB)
+- **RAM**: 256 MB (0.2 GB)
 - **Disk**: 3 GB
 - **OS**: Debian 12
 - **Privileged**: true

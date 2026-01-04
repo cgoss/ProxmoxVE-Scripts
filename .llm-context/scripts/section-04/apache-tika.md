@@ -14,7 +14,7 @@ The Apache Tika™ toolkit detects and extracts metadata and text from over a th
 
 ### Default Install
 - **CPU**: 1 cores
-- **RAM**: 2024 MB (1 GB)
+- **RAM**: 2024 MB (1.9765625 GB)
 - **Disk**: 10 GB
 - **OS**: Debian 12
 - **Privileged**: true

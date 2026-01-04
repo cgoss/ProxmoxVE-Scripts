@@ -14,7 +14,7 @@ Tinyauth is a simple authentication middleware that adds simple username/passwor
 
 ### Default Install
 - **CPU**: 1 cores
-- **RAM**: 256 MB (0 GB)
+- **RAM**: 256 MB (0.2 GB)
 - **Disk**: 2 GB
 - **OS**: Alpine 3.22
 - **Privileged**: true
@@ -22,7 +22,7 @@ Tinyauth is a simple authentication middleware that adds simple username/passwor
 
 ### Alpine Install
 - **CPU**: 1 core (typical for Alpine)
-- **RAM**: 512 MB (128 MB = 0 GB) - Alpine typically uses ~50% less RAM
+- **RAM**: 512 MB (128 MB = 0.1 GB) - Alpine typically uses ~50% less RAM
 - **Disk**: 2 GB (typical for Alpine)
 - **OS**: Alpine 3.22
 - **Privileged**: true

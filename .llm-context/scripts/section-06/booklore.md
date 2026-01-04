@@ -14,7 +14,7 @@ BookLore is a self-hosted digital library for managing and reading books, offeri
 
 ### Default Install
 - **CPU**: 3 cores
-- **RAM**: 3072 MB (3 GB)
+- **RAM**: 3072 MB (3.0 GB)
 - **Disk**: 7 GB
 - **OS**: Debian 12
 - **Privileged**: true

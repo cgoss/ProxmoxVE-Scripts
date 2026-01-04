@@ -14,7 +14,7 @@ URBackup is an open-source backup software designed for creating reliable and ef
 
 ### Default Install
 - **CPU**: 1 cores
-- **RAM**: 1024 MB (1 GB)
+- **RAM**: 1024 MB (1.0 GB)
 - **Disk**: 16 GB
 - **OS**: Debian 13
 - **Privileged**: false

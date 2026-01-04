@@ -14,7 +14,7 @@ Apache Tomcat is an open-source application server that runs Java Servlets and J
 
 ### Default Install
 - **CPU**: 1 cores
-- **RAM**: 1024 MB (1 GB)
+- **RAM**: 1024 MB (1.0 GB)
 - **Disk**: 5 GB
 - **OS**: Debian 12
 - **Privileged**: true

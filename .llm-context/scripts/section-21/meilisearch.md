@@ -14,7 +14,7 @@ Meilisearch is a fast, open-source search engine designed for instant, full-text
 
 ### Default Install
 - **CPU**: 2 cores
-- **RAM**: 4096 MB (4 GB)
+- **RAM**: 4096 MB (4.0 GB)
 - **Disk**: 7 GB
 - **OS**: Debian 13
 - **Privileged**: true

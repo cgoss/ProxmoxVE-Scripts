@@ -14,7 +14,7 @@ Ghost is a powerful app for professional publishers to create, share, and grow a
 
 ### Default Install
 - **CPU**: 2 cores
-- **RAM**: 1024 MB (1 GB)
+- **RAM**: 1024 MB (1.0 GB)
 - **Disk**: 5 GB
 - **OS**: Debian 12
 - **Privileged**: true

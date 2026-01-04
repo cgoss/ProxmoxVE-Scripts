@@ -14,7 +14,7 @@ Pf2eTools is an open-source website aiming to provide tools and information for 
 
 ### Default Install
 - **CPU**: 1 cores
-- **RAM**: 512 MB (0 GB)
+- **RAM**: 512 MB (0.5 GB)
 - **Disk**: 6 GB
 - **OS**: Debian 13
 - **Privileged**: true

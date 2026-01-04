@@ -15,7 +15,7 @@ A lightweight server monitoring platform that provides Docker statistics, histor
 
 ### Default Install
 - **CPU**: 1 cores
-- **RAM**: 512 MB (0 GB)
+- **RAM**: 512 MB (0.5 GB)
 - **Disk**: 5 GB
 - **OS**: Debian 12
 - **Privileged**: true

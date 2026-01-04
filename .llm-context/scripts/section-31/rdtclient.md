@@ -14,7 +14,7 @@ RDTClient is a web interface to manage your torrents on Real-Debrid, AllDebrid o
 
 ### Default Install
 - **CPU**: 1 cores
-- **RAM**: 1024 MB (1 GB)
+- **RAM**: 1024 MB (1.0 GB)
 - **Disk**: 4 GB
 - **OS**: Debian 13
 - **Privileged**: true

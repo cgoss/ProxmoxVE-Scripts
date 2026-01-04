@@ -14,7 +14,7 @@ Palmr is a fast and secure platform for sharing files, built with performance an
 
 ### Default Install
 - **CPU**: 4 cores
-- **RAM**: 6144 MB (6 GB)
+- **RAM**: 6144 MB (6.0 GB)
 - **Disk**: 6 GB
 - **OS**: Debian 13
 - **Privileged**: true

@@ -14,7 +14,7 @@ seelf is a self-hosted software which makes it easy to deploy your own applicati
 
 ### Default Install
 - **CPU**: 2 cores
-- **RAM**: 4096 MB (4 GB)
+- **RAM**: 4096 MB (4.0 GB)
 - **Disk**: 10 GB
 - **OS**: Debian 13
 - **Privileged**: true

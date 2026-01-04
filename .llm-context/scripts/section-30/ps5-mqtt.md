@@ -14,7 +14,7 @@ Integrate your Sony Playstation 5 devices with Home Assistant using MQTT.
 
 ### Default Install
 - **CPU**: 1 cores
-- **RAM**: 512 MB (0 GB)
+- **RAM**: 512 MB (0.5 GB)
 - **Disk**: 3 GB
 - **OS**: Debian 13
 - **Privileged**: true

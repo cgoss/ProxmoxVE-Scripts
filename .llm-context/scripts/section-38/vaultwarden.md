@@ -14,7 +14,7 @@ Vaultwarden is a self-hosted password manager which provides secure and encrypte
 
 ### Default Install
 - **CPU**: 4 cores
-- **RAM**: 6144 MB (6 GB)
+- **RAM**: 6144 MB (6.0 GB)
 - **Disk**: 20 GB
 - **OS**: Debian 13
 - **Privileged**: true
@@ -22,7 +22,7 @@ Vaultwarden is a self-hosted password manager which provides secure and encrypte
 
 ### Alpine Install
 - **CPU**: 1 core (typical for Alpine)
-- **RAM**: 512 MB (3072 MB = 3 GB) - Alpine typically uses ~50% less RAM
+- **RAM**: 512 MB (3072 MB = 3.0 GB) - Alpine typically uses ~50% less RAM
 - **Disk**: 2 GB (typical for Alpine)
 - **OS**: Alpine 13
 - **Privileged**: true

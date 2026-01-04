@@ -14,7 +14,7 @@ Mattermost is an open source platform for secure collaboration across the entire
 
 ### Default Install
 - **CPU**: 1 cores
-- **RAM**: 2048 MB (2 GB)
+- **RAM**: 2048 MB (2.0 GB)
 - **Disk**: 8 GB
 - **OS**: Ubuntu 24.04
 - **Privileged**: true

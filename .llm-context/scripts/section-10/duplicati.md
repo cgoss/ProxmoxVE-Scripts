@@ -14,7 +14,7 @@ Duplicati is a free, open-source backup solution that offers zero-trust, fully e
 
 ### Default Install
 - **CPU**: 1 cores
-- **RAM**: 1048 MB (1 GB)
+- **RAM**: 1048 MB (1.0234375 GB)
 - **Disk**: 10 GB
 - **OS**: Debian 12
 - **Privileged**: true

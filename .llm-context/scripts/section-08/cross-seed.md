@@ -14,7 +14,7 @@ cross-seed is an app designed to help you download torrents that you can cross s
 
 ### Default Install
 - **CPU**: 1 cores
-- **RAM**: 1024 MB (1 GB)
+- **RAM**: 1024 MB (1.0 GB)
 - **Disk**: 2 GB
 - **OS**: Debian 12
 - **Privileged**: true

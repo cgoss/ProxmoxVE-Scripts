@@ -14,7 +14,7 @@ Platform for searching, monitoring, and analyzing machine-generated data at scal
 
 ### Default Install
 - **CPU**: 4 cores
-- **RAM**: 8192 MB (8 GB)
+- **RAM**: 8192 MB (8.0 GB)
 - **Disk**: 40 GB
 - **OS**: Ubuntu 24.04
 - **Privileged**: true

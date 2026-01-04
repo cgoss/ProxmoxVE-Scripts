@@ -14,7 +14,7 @@ Tandoor Recipes is an application for managing recipes, planning meals, building
 
 ### Default Install
 - **CPU**: 4 cores
-- **RAM**: 4096 MB (4 GB)
+- **RAM**: 4096 MB (4.0 GB)
 - **Disk**: 10 GB
 - **OS**: Debian 13
 - **Privileged**: true

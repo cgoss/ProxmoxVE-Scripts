@@ -14,7 +14,7 @@ alpine-wireguard service
 
 ### Default Install
 - **CPU**: 1 cores
-- **RAM**: 256 MB (0 GB)
+- **RAM**: 256 MB (0.2 GB)
 - **Disk**: 1 GB
 - **OS**: Alpine 3.22
 - **Privileged**: true
@@ -22,6 +22,7 @@ alpine-wireguard service
 
 
 ## Special Requirements
+
 - **TUN/TAP Support**: Required for this service
 
 ## OS Support

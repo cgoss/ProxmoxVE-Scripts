@@ -14,7 +14,7 @@ Caddy is a powerful, extensible platform to serve your sites, services, and apps
 
 ### Default Install
 - **CPU**: 1 cores
-- **RAM**: 512 MB (0 GB)
+- **RAM**: 512 MB (0.5 GB)
 - **Disk**: 6 GB
 - **OS**: Debian 12
 - **Privileged**: true
@@ -22,7 +22,7 @@ Caddy is a powerful, extensible platform to serve your sites, services, and apps
 
 ### Alpine Install
 - **CPU**: 1 core (typical for Alpine)
-- **RAM**: 512 MB (256 MB = 0 GB) - Alpine typically uses ~50% less RAM
+- **RAM**: 512 MB (256 MB = 0.2 GB) - Alpine typically uses ~50% less RAM
 - **Disk**: 2 GB (typical for Alpine)
 - **OS**: Alpine 12
 - **Privileged**: true

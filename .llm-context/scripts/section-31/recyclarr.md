@@ -14,7 +14,7 @@ Recyclarr is an automation tool that integrates with media management software l
 
 ### Default Install
 - **CPU**: 1 cores
-- **RAM**: 512 MB (0 GB)
+- **RAM**: 512 MB (0.5 GB)
 - **Disk**: 2 GB
 - **OS**: Debian 13
 - **Privileged**: true

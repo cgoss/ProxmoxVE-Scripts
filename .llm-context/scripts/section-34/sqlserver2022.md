@@ -14,7 +14,7 @@ Script to automatically set up a SQL Server 2022 installation.
 
 ### Default Install
 - **CPU**: 1 cores
-- **RAM**: 2048 MB (2 GB)
+- **RAM**: 2048 MB (2.0 GB)
 - **Disk**: 10 GB
 - **OS**: Ubuntu 22.04
 - **Privileged**: false

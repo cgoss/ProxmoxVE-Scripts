@@ -14,7 +14,7 @@ NextPVR is a personal video recorder application for Microsoft Windows, Linux, M
 
 ### Default Install
 - **CPU**: 1 cores
-- **RAM**: 1024 MB (1 GB)
+- **RAM**: 1024 MB (1.0 GB)
 - **Disk**: 5 GB
 - **OS**: Debian 13
 - **Privileged**: true
@@ -29,6 +29,7 @@ NextPVR is a personal video recorder application for Microsoft Windows, Linux, M
 
 
 ## Special Requirements
+
 - **GPU Passthrough**: Required for this service
 
 ## OS Support

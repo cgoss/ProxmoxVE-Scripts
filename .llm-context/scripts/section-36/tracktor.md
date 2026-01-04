@@ -15,7 +15,7 @@ Easily track fuel consumption, maintenance, insurance, and regulatory documents 
 
 ### Default Install
 - **CPU**: 1 cores
-- **RAM**: 1024 MB (1 GB)
+- **RAM**: 1024 MB (1.0 GB)
 - **Disk**: 6 GB
 - **OS**: Debian 13
 - **Privileged**: true

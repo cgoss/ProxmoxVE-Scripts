@@ -14,7 +14,7 @@ Apache-Cassandra is an open source NoSQL distributed database trusted by thousan
 
 ### Default Install
 - **CPU**: 1 cores
-- **RAM**: 2048 MB (2 GB)
+- **RAM**: 2048 MB (2.0 GB)
 - **Disk**: 4 GB
 - **OS**: Debian 12
 - **Privileged**: true

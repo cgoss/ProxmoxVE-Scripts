@@ -14,7 +14,7 @@ PocketBase is an open source backend consisting of embedded database (SQLite) wi
 
 ### Default Install
 - **CPU**: 1 cores
-- **RAM**: 512 MB (0 GB)
+- **RAM**: 512 MB (0.5 GB)
 - **Disk**: 8 GB
 - **OS**: Debian 13
 - **Privileged**: true

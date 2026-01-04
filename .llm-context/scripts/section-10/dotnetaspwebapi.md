@@ -14,7 +14,7 @@ Automatically setup a ASP.NET server up, as well as a FTP server so you can publ
 
 ### Default Install
 - **CPU**: 1 cores
-- **RAM**: 1024 MB (1 GB)
+- **RAM**: 1024 MB (1.0 GB)
 - **Disk**: 8 GB
 - **OS**: Ubuntu 24.04
 - **Privileged**: false

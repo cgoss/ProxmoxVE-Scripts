@@ -14,7 +14,7 @@ Create a classic TV experience using your own media - IPTV backed by Plex/Jellyf
 
 ### Default Install
 - **CPU**: 2 cores
-- **RAM**: 1024 MB (1 GB)
+- **RAM**: 1024 MB (1.0 GB)
 - **Disk**: 5 GB
 - **OS**: Debian 13
 - **Privileged**: true
@@ -29,6 +29,7 @@ Create a classic TV experience using your own media - IPTV backed by Plex/Jellyf
 
 
 ## Special Requirements
+
 - **GPU Passthrough**: Required for this service
 
 ## OS Support

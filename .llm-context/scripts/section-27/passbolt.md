@@ -14,7 +14,7 @@ Passbolt is a hybrid credential platform. It is built-first for modern IT teams,
 
 ### Default Install
 - **CPU**: 2 cores
-- **RAM**: 2048 MB (2 GB)
+- **RAM**: 2048 MB (2.0 GB)
 - **Disk**: 2 GB
 - **OS**: Debian 13
 - **Privileged**: true

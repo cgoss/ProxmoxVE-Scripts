@@ -14,7 +14,7 @@ Channels DVR Server runs on your computer or NAS device at home. There's no clou
 
 ### Default Install
 - **CPU**: 2 cores
-- **RAM**: 1024 MB (1 GB)
+- **RAM**: 1024 MB (1.0 GB)
 - **Disk**: 8 GB
 - **OS**: Debian 12
 - **Privileged**: false
@@ -29,6 +29,7 @@ Channels DVR Server runs on your computer or NAS device at home. There's no clou
 
 
 ## Special Requirements
+
 - **GPU Passthrough**: Required for this service
 
 ## OS Support

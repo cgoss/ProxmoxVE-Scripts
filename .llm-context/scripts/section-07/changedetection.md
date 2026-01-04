@@ -14,7 +14,7 @@ Change Detection is a service that allows you to monitor changes to web pages an
 
 ### Default Install
 - **CPU**: 4 cores
-- **RAM**: 4096 MB (4 GB)
+- **RAM**: 4096 MB (4.0 GB)
 - **Disk**: 10 GB
 - **OS**: Debian 12
 - **Privileged**: true

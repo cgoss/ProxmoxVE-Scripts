@@ -14,7 +14,7 @@ HiveMQ CE is a Java-based open source MQTT broker that fully supports MQTT 3.x a
 
 ### Default Install
 - **CPU**: 1 cores
-- **RAM**: 1024 MB (1 GB)
+- **RAM**: 1024 MB (1.0 GB)
 - **Disk**: 4 GB
 - **OS**: Debian 13
 - **Privileged**: true

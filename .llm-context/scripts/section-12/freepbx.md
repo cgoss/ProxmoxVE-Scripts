@@ -14,7 +14,7 @@ FreePBX is a web-based open-source graphical user interface that manages Asteris
 
 ### Default Install
 - **CPU**: 2 cores
-- **RAM**: 2048 MB (2 GB)
+- **RAM**: 2048 MB (2.0 GB)
 - **Disk**: 10 GB
 - **OS**: Debian 12
 - **Privileged**: true

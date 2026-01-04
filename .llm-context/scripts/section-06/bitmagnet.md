@@ -14,7 +14,7 @@ A self-hosted BitTorrent indexer, DHT crawler, content classifier and torrent se
 
 ### Default Install
 - **CPU**: 2 cores
-- **RAM**: 1024 MB (1 GB)
+- **RAM**: 1024 MB (1.0 GB)
 - **Disk**: 4 GB
 - **OS**: Debian 12
 - **Privileged**: true
@@ -22,7 +22,7 @@ A self-hosted BitTorrent indexer, DHT crawler, content classifier and torrent se
 
 ### Alpine Install
 - **CPU**: 1 core (typical for Alpine)
-- **RAM**: 512 MB (512 MB = 0 GB) - Alpine typically uses ~50% less RAM
+- **RAM**: 512 MB (512 MB = 0.5 GB) - Alpine typically uses ~50% less RAM
 - **Disk**: 2 GB (typical for Alpine)
 - **OS**: Alpine 12
 - **Privileged**: true

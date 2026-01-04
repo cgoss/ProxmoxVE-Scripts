@@ -14,7 +14,7 @@ Homepage is a self-hosted dashboard solution for centralizing and organizing dat
 
 ### Default Install
 - **CPU**: 2 cores
-- **RAM**: 4096 MB (4 GB)
+- **RAM**: 4096 MB (4.0 GB)
 - **Disk**: 6 GB
 - **OS**: Debian 12
 - **Privileged**: true

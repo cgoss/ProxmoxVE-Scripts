@@ -14,7 +14,7 @@ Self-hosted pastebin powered by Git, open-source alternative to Github Gist.
 
 ### Default Install
 - **CPU**: 1 cores
-- **RAM**: 1024 MB (1 GB)
+- **RAM**: 1024 MB (1.0 GB)
 - **Disk**: 8 GB
 - **OS**: Debian 13
 - **Privileged**: true

@@ -14,7 +14,7 @@ BunkerWeb is a security-focused web server that enhances web application protect
 
 ### Default Install
 - **CPU**: 2 cores
-- **RAM**: 8192 MB (8 GB)
+- **RAM**: 8192 MB (8.0 GB)
 - **Disk**: 4 GB
 - **OS**: Debian 12
 - **Privileged**: true

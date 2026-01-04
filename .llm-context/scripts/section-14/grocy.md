@@ -14,7 +14,7 @@ grocy is a web-based self-hosted groceries & household management solution for y
 
 ### Default Install
 - **CPU**: 1 cores
-- **RAM**: 512 MB (0 GB)
+- **RAM**: 512 MB (0.5 GB)
 - **Disk**: 2 GB
 - **OS**: Debian 12
 - **Privileged**: true

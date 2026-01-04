@@ -14,7 +14,7 @@ Kubo, developed by IPFS, is a decentralized file storage and sharing protocol. I
 
 ### Default Install
 - **CPU**: 2 cores
-- **RAM**: 4096 MB (4 GB)
+- **RAM**: 4096 MB (4.0 GB)
 - **Disk**: 4 GB
 - **OS**: Debian 13
 - **Privileged**: true

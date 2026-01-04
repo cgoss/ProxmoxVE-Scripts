@@ -14,7 +14,7 @@ Z-Wave JS UI is an open-source software that serves as a gateway between Z-Wave 
 
 ### Default Install
 - **CPU**: 2 cores
-- **RAM**: 1024 MB (1 GB)
+- **RAM**: 1024 MB (1.0 GB)
 - **Disk**: 4 GB
 - **OS**: Debian 13
 - **Privileged**: false

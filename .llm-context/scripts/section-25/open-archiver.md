@@ -14,7 +14,7 @@ Open Archiver is a secure, self-hosted email archiving solution, and it's comple
 
 ### Default Install
 - **CPU**: 2 cores
-- **RAM**: 3072 MB (3 GB)
+- **RAM**: 3072 MB (3.0 GB)
 - **Disk**: 8 GB
 - **OS**: Debian 13
 - **Privileged**: true

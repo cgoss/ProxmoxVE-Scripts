@@ -14,7 +14,7 @@ Owncast is a free and open source live video and web chat server for use with ex
 
 ### Default Install
 - **CPU**: 2 cores
-- **RAM**: 2048 MB (2 GB)
+- **RAM**: 2048 MB (2.0 GB)
 - **Disk**: 2 GB
 - **OS**: Debian 13
 - **Privileged**: true
@@ -29,6 +29,7 @@ Owncast is a free and open source live video and web chat server for use with ex
 
 
 ## Special Requirements
+
 - **GPU Passthrough**: Required for this service
 
 ## OS Support

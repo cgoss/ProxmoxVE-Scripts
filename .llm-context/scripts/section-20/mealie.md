@@ -14,7 +14,7 @@ Mealie is a self hosted recipe manager, meal planner and shopping list with a Re
 
 ### Default Install
 - **CPU**: 2 cores
-- **RAM**: 3072 MB (3 GB)
+- **RAM**: 3072 MB (3.0 GB)
 - **Disk**: 10 GB
 - **OS**: Debian 13
 - **Privileged**: true

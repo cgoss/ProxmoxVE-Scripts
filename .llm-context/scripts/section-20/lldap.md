@@ -14,7 +14,7 @@ LLDAP is a lightweight LDAP server designed for simplicity and ease of use. It p
 
 ### Default Install
 - **CPU**: 1 cores
-- **RAM**: 512 MB (0 GB)
+- **RAM**: 512 MB (0.5 GB)
 - **Disk**: 4 GB
 - **OS**: Debian 13
 - **Privileged**: true

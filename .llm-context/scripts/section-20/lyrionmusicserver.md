@@ -14,7 +14,7 @@ Lyrion Music Server is an open-source server software to stream local music coll
 
 ### Default Install
 - **CPU**: 1 cores
-- **RAM**: 1024 MB (1 GB)
+- **RAM**: 1024 MB (1.0 GB)
 - **Disk**: 3 GB
 - **OS**: Debian 13
 - **Privileged**: true

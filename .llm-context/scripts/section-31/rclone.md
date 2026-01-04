@@ -14,7 +14,7 @@ Rclone is a command-line program to manage files on cloud storage. It is a featu
 
 ### Default Install
 - **CPU**: 1 cores
-- **RAM**: 512 MB (0 GB)
+- **RAM**: 512 MB (0.5 GB)
 - **Disk**: 2 GB
 - **OS**: Debian 13
 - **Privileged**: true
@@ -22,7 +22,7 @@ Rclone is a command-line program to manage files on cloud storage. It is a featu
 
 ### Alpine Install
 - **CPU**: 1 core (typical for Alpine)
-- **RAM**: 512 MB (256 MB = 0 GB) - Alpine typically uses ~50% less RAM
+- **RAM**: 512 MB (256 MB = 0.2 GB) - Alpine typically uses ~50% less RAM
 - **Disk**: 2 GB (typical for Alpine)
 - **OS**: Alpine 13
 - **Privileged**: true
@@ -37,6 +37,7 @@ Rclone is a command-line program to manage files on cloud storage. It is a featu
 
 
 ## Special Requirements
+
 - **FUSE Support**: Required for this service
 
 ## OS Support

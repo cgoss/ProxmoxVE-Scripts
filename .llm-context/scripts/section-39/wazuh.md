@@ -14,7 +14,7 @@ Wazuh is an open-source security monitoring solution that provides endpoint prot
 
 ### Default Install
 - **CPU**: 4 cores
-- **RAM**: 4096 MB (4 GB)
+- **RAM**: 4096 MB (4.0 GB)
 - **Disk**: 25 GB
 - **OS**: Debian 12
 - **Privileged**: true

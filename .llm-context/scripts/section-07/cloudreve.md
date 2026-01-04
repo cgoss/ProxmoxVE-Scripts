@@ -14,7 +14,7 @@ Cloudreve is an open-source, community-driven cloud storage system that provides
 
 ### Default Install
 - **CPU**: 1 cores
-- **RAM**: 1024 MB (1 GB)
+- **RAM**: 1024 MB (1.0 GB)
 - **Disk**: 10 GB
 - **OS**: Debian 12
 - **Privileged**: true

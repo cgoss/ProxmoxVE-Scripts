@@ -14,7 +14,7 @@ Synapse is an open source Matrix homeserver implementation, written and maintain
 
 ### Default Install
 - **CPU**: 1 cores
-- **RAM**: 2048 MB (2 GB)
+- **RAM**: 2048 MB (2.0 GB)
 - **Disk**: 8 GB
 - **OS**: Debian 12
 - **Privileged**: true

@@ -14,7 +14,7 @@ Wavelog is a self-hosted PHP application that allows you to log your amateur rad
 
 ### Default Install
 - **CPU**: 1 cores
-- **RAM**: 512 MB (0 GB)
+- **RAM**: 512 MB (0.5 GB)
 - **Disk**: 2 GB
 - **OS**: Debian 13
 - **Privileged**: true

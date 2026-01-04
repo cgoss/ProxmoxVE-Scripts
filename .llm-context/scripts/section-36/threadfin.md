@@ -14,7 +14,7 @@ Threadfin is a M3U proxy for Kernel, Plex, Jellyfin, or Emby, based on xTeVe.
 
 ### Default Install
 - **CPU**: 1 cores
-- **RAM**: 1024 MB (1 GB)
+- **RAM**: 1024 MB (1.0 GB)
 - **Disk**: 4 GB
 - **OS**: Debian 13
 - **Privileged**: true
@@ -29,6 +29,7 @@ Threadfin is a M3U proxy for Kernel, Plex, Jellyfin, or Emby, based on xTeVe.
 
 
 ## Special Requirements
+
 - **GPU Passthrough**: Required for this service
 
 ## OS Support

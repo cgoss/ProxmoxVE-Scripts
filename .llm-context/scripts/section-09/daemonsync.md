@@ -14,7 +14,7 @@ Sync files from app to server, share photos & videos, back up your data and stay
 
 ### Default Install
 - **CPU**: 1 cores
-- **RAM**: 512 MB (0 GB)
+- **RAM**: 512 MB (0.5 GB)
 - **Disk**: 8 GB
 - **OS**: Debian 12
 - **Privileged**: true

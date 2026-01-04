@@ -14,7 +14,7 @@ PhotoPrism is an AI-Powered Photos App for the Decentralized Web. It makes use o
 
 ### Default Install
 - **CPU**: 2 cores
-- **RAM**: 3072 MB (3 GB)
+- **RAM**: 3072 MB (3.0 GB)
 - **Disk**: 8 GB
 - **OS**: Debian 13
 - **Privileged**: true
@@ -29,6 +29,7 @@ PhotoPrism is an AI-Powered Photos App for the Decentralized Web. It makes use o
 
 
 ## Special Requirements
+
 - **GPU Passthrough**: Required for this service
 
 ## OS Support

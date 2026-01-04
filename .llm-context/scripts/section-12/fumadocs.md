@@ -14,7 +14,7 @@ Fumadocs is a flexible and high-performance framework for creating well-structur
 
 ### Default Install
 - **CPU**: 2 cores
-- **RAM**: 2048 MB (2 GB)
+- **RAM**: 2048 MB (2.0 GB)
 - **Disk**: 5 GB
 - **OS**: Debian 12
 - **Privileged**: true

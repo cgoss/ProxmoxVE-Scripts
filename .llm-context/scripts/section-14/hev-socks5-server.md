@@ -14,7 +14,7 @@ HevSocks5Server is a simple, lightweight socks5 server.
 
 ### Default Install
 - **CPU**: 1 cores
-- **RAM**: 512 MB (0 GB)
+- **RAM**: 512 MB (0.5 GB)
 - **Disk**: 2 GB
 - **OS**: Debian 12
 - **Privileged**: true

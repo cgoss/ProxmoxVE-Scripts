@@ -14,7 +14,7 @@ Crafty Controller is a free and open-source Minecraft launcher and manager that 
 
 ### Default Install
 - **CPU**: 2 cores
-- **RAM**: 4096 MB (4 GB)
+- **RAM**: 4096 MB (4.0 GB)
 - **Disk**: 16 GB
 - **OS**: Debian 12
 - **Privileged**: true

@@ -14,7 +14,7 @@ Zabbix is an all-in-one monitoring solution with a variety of enterprise-grade f
 
 ### Default Install
 - **CPU**: 2 cores
-- **RAM**: 4096 MB (4 GB)
+- **RAM**: 4096 MB (4.0 GB)
 - **Disk**: 6 GB
 - **OS**: Debian 13
 - **Privileged**: true

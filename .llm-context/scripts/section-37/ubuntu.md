@@ -14,7 +14,7 @@ Ubuntu is a distribution based on Debian, designed to have regular releases and 
 
 ### Default Install
 - **CPU**: 1 cores
-- **RAM**: 512 MB (0 GB)
+- **RAM**: 512 MB (0.5 GB)
 - **Disk**: 2 GB
 - **OS**: Ubuntu 24.04
 - **Privileged**: true

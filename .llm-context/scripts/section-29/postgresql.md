@@ -14,7 +14,7 @@ PostgreSQL (often referred to as Postgres) is an open-source relational database
 
 ### Default Install
 - **CPU**: 1 cores
-- **RAM**: 1024 MB (1 GB)
+- **RAM**: 1024 MB (1.0 GB)
 - **Disk**: 4 GB
 - **OS**: Debian 13
 - **Privileged**: true
@@ -22,7 +22,7 @@ PostgreSQL (often referred to as Postgres) is an open-source relational database
 
 ### Alpine Install
 - **CPU**: 1 core (typical for Alpine)
-- **RAM**: 512 MB (512 MB = 0 GB) - Alpine typically uses ~50% less RAM
+- **RAM**: 512 MB (512 MB = 0.5 GB) - Alpine typically uses ~50% less RAM
 - **Disk**: 2 GB (typical for Alpine)
 - **OS**: Alpine 13
 - **Privileged**: true

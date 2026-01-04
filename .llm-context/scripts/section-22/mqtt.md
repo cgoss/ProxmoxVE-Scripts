@@ -14,7 +14,7 @@ Eclipse Mosquitto is an open-source message broker that implements the MQTT (Mes
 
 ### Default Install
 - **CPU**: 1 cores
-- **RAM**: 512 MB (0 GB)
+- **RAM**: 512 MB (0.5 GB)
 - **Disk**: 2 GB
 - **OS**: Debian 13
 - **Privileged**: true

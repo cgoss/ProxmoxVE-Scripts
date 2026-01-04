@@ -14,7 +14,7 @@ MinIO is a High Performance Object Storage released under GNU Affero General Pub
 
 ### Default Install
 - **CPU**: 1 cores
-- **RAM**: 1024 MB (1 GB)
+- **RAM**: 1024 MB (1.0 GB)
 - **Disk**: 5 GB
 - **OS**: Debian 13
 - **Privileged**: true

@@ -14,7 +14,7 @@ Hyperion is an opensource Ambient Lighting implementation. It supports many LED 
 
 ### Default Install
 - **CPU**: 1 cores
-- **RAM**: 512 MB (0 GB)
+- **RAM**: 512 MB (0.5 GB)
 - **Disk**: 2 GB
 - **OS**: Debian 13
 - **Privileged**: true
@@ -29,6 +29,7 @@ Hyperion is an opensource Ambient Lighting implementation. It supports many LED 
 
 
 ## Special Requirements
+
 - **GPU Passthrough**: Required for this service
 
 ## OS Support

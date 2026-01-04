@@ -14,7 +14,7 @@ Stylus (style + status) is a lightweight status page for infrastructure and netw
 
 ### Default Install
 - **CPU**: 1 cores
-- **RAM**: 1024 MB (1 GB)
+- **RAM**: 1024 MB (1.0 GB)
 - **Disk**: 2 GB
 - **OS**: Debian 13
 - **Privileged**: true
@@ -29,6 +29,7 @@ Stylus (style + status) is a lightweight status page for infrastructure and netw
 
 
 ## Special Requirements
+
 - **FUSE Support**: Required for this service
 
 ## OS Support

@@ -14,7 +14,7 @@ Elixir Livebook is an interactive, web-based notebook platform for Elixir that c
 
 ### Default Install
 - **CPU**: 1 cores
-- **RAM**: 1024 MB (1 GB)
+- **RAM**: 1024 MB (1.0 GB)
 - **Disk**: 4 GB
 - **OS**: Ubuntu 24.04
 - **Privileged**: true

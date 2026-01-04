@@ -14,7 +14,7 @@ Apt-Cacher-NG is a caching proxy. Specialized for package files from Linux distr
 
 ### Default Install
 - **CPU**: 1 cores
-- **RAM**: 512 MB (0 GB)
+- **RAM**: 512 MB (0.5 GB)
 - **Disk**: 10 GB
 - **OS**: Debian 12
 - **Privileged**: true

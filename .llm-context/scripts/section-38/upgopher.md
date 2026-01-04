@@ -14,7 +14,7 @@ A simple Go web server for file upload, download, and browsing. Cross-platform a
 
 ### Default Install
 - **CPU**: 1 cores
-- **RAM**: 512 MB (0 GB)
+- **RAM**: 512 MB (0.5 GB)
 - **Disk**: 4 GB
 - **OS**: Debian 13
 - **Privileged**: true

@@ -14,7 +14,7 @@ Vikunja is a powerful self-hosted todo app. It allows you to create and manage t
 
 ### Default Install
 - **CPU**: 1 cores
-- **RAM**: 1024 MB (1 GB)
+- **RAM**: 1024 MB (1.0 GB)
 - **Disk**: 4 GB
 - **OS**: Debian 13
 - **Privileged**: true

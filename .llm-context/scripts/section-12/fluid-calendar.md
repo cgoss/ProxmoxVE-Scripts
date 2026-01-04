@@ -14,7 +14,7 @@ The open-source intelligent calendar that adapts to your workflow. Experience se
 
 ### Default Install
 - **CPU**: 3 cores
-- **RAM**: 4096 MB (4 GB)
+- **RAM**: 4096 MB (4.0 GB)
 - **Disk**: 7 GB
 - **OS**: Debian 12
 - **Privileged**: true

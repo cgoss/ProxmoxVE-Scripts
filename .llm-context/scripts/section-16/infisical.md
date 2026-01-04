@@ -14,7 +14,7 @@ Secrets, certificates, and access management on autopilot. All-in-one platform t
 
 ### Default Install
 - **CPU**: 2 cores
-- **RAM**: 2048 MB (2 GB)
+- **RAM**: 2048 MB (2.0 GB)
 - **Disk**: 6 GB
 - **OS**: Debian 13
 - **Privileged**: true

@@ -14,7 +14,7 @@ Wizarr is an automatic user invitation system for Plex, Jellyfin and Emby. Creat
 
 ### Default Install
 - **CPU**: 1 cores
-- **RAM**: 1024 MB (1 GB)
+- **RAM**: 1024 MB (1.0 GB)
 - **Disk**: 4 GB
 - **OS**: Debian 13
 - **Privileged**: true

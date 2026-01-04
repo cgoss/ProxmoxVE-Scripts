@@ -14,7 +14,7 @@ Traccar is an open source GPS tracking system. It supports more than 200 GPS pro
 
 ### Default Install
 - **CPU**: 1 cores
-- **RAM**: 1024 MB (1 GB)
+- **RAM**: 1024 MB (1.0 GB)
 - **Disk**: 2 GB
 - **OS**: Debian 13
 - **Privileged**: true

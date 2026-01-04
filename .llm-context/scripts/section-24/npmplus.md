@@ -14,7 +14,7 @@ NPMplus is an enhanced version of Nginx Proxy Manager. It simplifies the process
 
 ### Default Install
 - **CPU**: 1 cores
-- **RAM**: 512 MB (0 GB)
+- **RAM**: 512 MB (0.5 GB)
 - **Disk**: 3 GB
 - **OS**: Alpine 3.22
 - **Privileged**: true
@@ -22,7 +22,7 @@ NPMplus is an enhanced version of Nginx Proxy Manager. It simplifies the process
 
 ### Alpine Install
 - **CPU**: 1 core (typical for Alpine)
-- **RAM**: 512 MB (256 MB = 0 GB) - Alpine typically uses ~50% less RAM
+- **RAM**: 512 MB (256 MB = 0.2 GB) - Alpine typically uses ~50% less RAM
 - **Disk**: 2 GB (typical for Alpine)
 - **OS**: Alpine 3.22
 - **Privileged**: true

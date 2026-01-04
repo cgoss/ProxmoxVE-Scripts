@@ -14,7 +14,7 @@ EVCC is an open-source tool that manages EV charging, prioritizing solar energy 
 
 ### Default Install
 - **CPU**: 1 cores
-- **RAM**: 1024 MB (1 GB)
+- **RAM**: 1024 MB (1.0 GB)
 - **Disk**: 4 GB
 - **OS**: Debian 12
 - **Privileged**: true

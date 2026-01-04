@@ -14,7 +14,7 @@ Tianji is an open-source tool for website analytics, uptime monitoring, and serv
 
 ### Default Install
 - **CPU**: 4 cores
-- **RAM**: 4096 MB (4 GB)
+- **RAM**: 4096 MB (4.0 GB)
 - **Disk**: 12 GB
 - **OS**: Debian 13
 - **Privileged**: true

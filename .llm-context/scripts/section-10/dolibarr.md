@@ -14,7 +14,7 @@ Dolibarr ERP CRM is a modern software package to manage your company or foundati
 
 ### Default Install
 - **CPU**: 1 cores
-- **RAM**: 2048 MB (2 GB)
+- **RAM**: 2048 MB (2.0 GB)
 - **Disk**: 6 GB
 - **OS**: Debian 12
 - **Privileged**: true

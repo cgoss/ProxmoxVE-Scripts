@@ -284,3 +284,12 @@ echo -e "${TAB}${GATEWAY}${BGN}http://${IP}${CL}"
 - [ ] Update functions checks if app is installed and for new version.
 - [ ] Update function cleans up temporary files.
 - [ ] Script ends with a helpful message for the user to reach the application.
+
+**Note for AI/LLM Context Generation**:
+- [ ] Create corresponding JSON metadata file in `frontend/public/json/${APP}.json`
+- [ ] Include: name, description, categories, resources (CPU/RAM/disk), interface_port, website, documentation, config_path
+- [ ] Run `.llm-context/automation/generate-context.sh` to generate script context file
+- [ ] The context file will be automatically created in `.llm-context/scripts/section-*/${APP}.md`
+
+For JSON metadata template, see `docs/contribution/templates_json/AppName.json`
+For LLM Context System details, see `.llm-context/README.md`

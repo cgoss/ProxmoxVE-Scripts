@@ -146,6 +146,66 @@ Key points:
 - **[docs/EXIT_CODES.md](../EXIT_CODES.md)** - Exit codes reference
 - **[docs/DEV_MODE.md](../DEV_MODE.md)** - Debugging guide
 
+### AI/LLM Context System
+
+**For AI Agents and LLMs** - Complete context system for understanding and automating ProxmoxVE scripts:
+
+- **[.llm-context/README.md](../.llm-context/README.md)** - LLM Context System overview
+- **[.llm-context/index.md](../.llm-context/index.md)** - Master navigation index (6 search methods)
+- **[.llm-context/categories/](../.llm-context/categories/)** - 26 category-based guides
+- **[.llm-context/scripts/](../.llm-context/scripts/)** - 408 individual script contexts
+- **[.llm-context/execution/](../.llm-context/execution/)** - Non-interactive execution guides
+- **[.llm-context/script-creation/](../.llm-context/script-creation/)** - Script development guides
+- **[AGENTS.md](../AGENTS.md)** - Agent guidelines and build commands
+
+**Quick Start for AI Agents:**
+```bash
+# Find a script by category
+cat .llm-context/categories/13-media-streaming.md
+
+# Execute non-interactively
+var_cpu=2 var_ram=2048 var_disk=4 bash ct/jellyfin.sh
+
+# Create new script using guides
+cat .llm-context/script-creation/overview.md
+```
+
+**Automation Scripts for Context Generation:**
+
+For maintainers and contributors working with multiple scripts:
+
+1. **Generate All Context Files**:
+   ```bash
+   # Run automation script to generate/refresh all 408 context files
+   bash .llm-context/automation/generate-context.sh
+   ```
+
+2. **Update Index and Categories**:
+   ```bash
+   # Update master index and category files with new scripts
+   bash .llm-context/automation/update-index.sh
+   ```
+
+3. **Scan for Missing Contexts**:
+   ```bash
+   # Check for scripts without context files
+   bash .llm-context/automation/scan-new-scripts.sh
+   ```
+
+**Context Generation Workflow:**
+
+When adding or updating a script:
+1. Create/update CT script: `ct/myapp.sh`
+2. Create/update install script: `install/myapp-install.sh`
+3. Create/update JSON metadata: `frontend/public/json/myapp.json`
+4. Run: `bash .llm-context/automation/generate-context.sh`
+5. Verify: Check `.llm-context/scripts/section-*/myapp.md`
+6. Update index: `bash .llm-context/automation/update-index.sh` (if needed)
+
+**For full automation documentation, see:**
+- **[automation/README.md](../.llm-context/automation/README.md)** - Complete automation script guide
+- **[AGENTS.md](../AGENTS.md)** - Agent guidelines with LLM Context System section
+
 ### Community Guides
 
 See [USER_SUBMITTED_GUIDES.md](USER_SUBMITTED_GUIDES.md) for excellent community-written guides:
@@ -255,6 +315,15 @@ Before opening a PR:
 - [ ] No merge conflicts
 - [ ] Synced with upstream/main
 - [ ] Clear PR title and description
+- [ ] **LLM Context files generated** (for new scripts):
+  - JSON metadata created: `frontend/public/json/{script}.json`
+  - Run: `bash .llm-context/automation/generate-context.sh`
+  - Verify: `.llm-context/scripts/section-*/{script}.md` exists
+- [ ] **Index updated** (if multiple scripts):
+  - Run: `bash .llm-context/automation/update-index.sh` (optional)
+- [ ] **Category populated** (if applicable):
+  - Script added to appropriate category file
+  - Documentation: `.llm-context/categories/` guides
 
 ---
 

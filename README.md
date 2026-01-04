@@ -213,10 +213,97 @@ This adds a menu to your Proxmox interface for easy script access without visiti
 
 <div align="center">
   <br />
-  
+
   👉 Check our **[Contributing Guidelines](https://github.com/community-scripts/ProxmoxVE/blob/main/docs/contribution/README.md)** to get started
-  
+
 </div>
+
+---
+
+## 🤖 AI/LLM Context System
+
+<div align="center">
+
+Comprehensive documentation system for AI/LLM agents to understand, execute, and create ProxmoxVE Helper-Scripts efficiently.
+
+</div>
+
+### What Is This System?
+
+The **LLM Context System** provides detailed context for all 408+ scripts, organized into:
+- **408 individual script contexts** with resources, ports, and execution guidance
+- **26 category guides** covering service types and patterns
+- **6 execution mode docs** for non-interactive automation
+- **9 script creation guides** for developing new scripts
+
+### Quick Start for AI Agents
+
+<details>
+<summary><strong>🚀 Click to expand</strong></summary>
+
+#### Find a Script
+
+```bash
+# Navigate to context system
+cd .llm-context
+
+# Find by category
+cat categories/13-media-streaming.md
+
+# Find by name
+find scripts -name "jellyfin.md"
+```
+
+#### Execute Non-Interactively
+
+```bash
+# Default mode (uses script defaults)
+var_cpu=2 var_ram=2048 var_disk=4 bash ct/jellyfin.sh
+
+# Advanced mode with custom resources
+var_cpu=4 var_ram=8192 var_disk=20 var_storage=local-lvm bash ct/jellyfin.sh
+```
+
+#### Create New Script
+
+```bash
+# Follow script creation guides
+cat .llm-context/script-creation/overview.md
+cat .llm-context/script-creation/research-methodology.md
+cat .llm-context/script-creation/installation-patterns.md
+```
+
+</details>
+
+### Documentation Structure
+
+**For AI Agents** - Use `.llm-context/` directory:
+- **[README.md](.llm-context/README.md)** - System overview and navigation
+- **[index.md](.llm-context/index.md)** - Master index with 6 search methods
+- **[categories/](.llm-context/categories/)** - 26 service category guides
+- **[scripts/](.llm-context/scripts/)** - 408 individual script contexts
+- **[execution/](.llm-context/execution/)** - Non-interactive execution guides
+- **[script-creation/](.llm-context/script-creation/)** - Script development guides
+
+**For Developers** - Use docs/contribution/:
+- **[CONTRIBUTING.md](docs/contribution/CONTRIBUTING.md)** - Coding standards
+- **[ct/DETAILED_GUIDE.md](docs/contribution/ct/DETAILED_GUIDE.md)** - CT script guide
+- **[install/DETAILED_GUIDE.md](docs/contribution/install/DETAILED_GUIDE.md)** - Install script guide
+
+### Key Features
+
+- ✅ 408 scripts with full context (resources, ports, dependencies)
+- ✅ Non-interactive execution fully documented
+- ✅ Storage selection guidance for all scripts
+- ✅ Script creation patterns and templates
+- ✅ Category-based navigation by service type
+
+### Learn More
+
+- **[Full Documentation](.llm-context/README.md)** - Complete system overview
+- **[Navigation Guide](.llm-context/index.md)** - How to find any script
+- **[Non-Interactive Mode](.llm-context/execution/overview.md)** - Automation without prompts
+- **[AGENTS.md](AGENTS.md)** - Agent guidelines and commands
 
 ---
 

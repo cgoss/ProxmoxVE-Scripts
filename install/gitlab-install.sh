@@ -47,33 +47,41 @@ msg_ok "GitLab repository added"
 msg_info "Configuring GitLab URL"
 IPADDRESS=$(hostname -I | awk '{print $1}')
 
-#########################
-#   SSL CONFIGURATION   #
-#########################
+# Ask about SSL BEFORE installation
 echo
 read -r -p "${TAB3}Enable HTTPS with self-signed certificate? [y/N]: " ENABLE_SSL
 
 if [[ "$ENABLE_SSL" =~ ^([yY][eE][sS]|[yY])$ ]]; then
   EXTERNAL_URL="https://${IPADDRESS}"
-  msg_info "HTTPS will be configured with self-signed certificate"
 else
   EXTERNAL_URL="http://${IPADDRESS}"
-  msg_info "HTTP will be used (not recommended for production)"
 fi
 
-#########################
-#   INSTALL GITLAB      #
-#########################
-msg_info "Installing GitLab Community Edition (this may take several minutes)"
-msg_info "GitLab omnibus includes PostgreSQL, Redis, Nginx, and all required components"
-EXTERNAL_URL="${EXTERNAL_URL}" apt-get install -y gitlab-ce
-msg_ok "GitLab packages installed"
+# Ask about email BEFORE installation
+echo
+read -r -p "${TAB3}Configure email/SMTP now? [y/N]: " SETUP_EMAIL
+if [[ "$SETUP_EMAIL" =~ ^([yY][eE][sS]|[yY])$ ]]; then
+  read -r -p "${TAB3}SMTP server (e.g., smtp.gmail.com): " SMTP_SERVER
+  read -r -p "${TAB3}SMTP port (usually 587): " SMTP_PORT
+  read -r -p "${TAB3}SMTP username: " SMTP_USER
+  read -r -s -p "${TAB3}SMTP password: " SMTP_PASS
+  echo
+  read -r -p "${TAB3}From email address: " FROM_EMAIL
+fi
 
-#########################
-#   POST-INSTALL CONFIG #
-#########################
+# PRE-CONFIGURE gitlab.rb BEFORE package installation
+msg_info "Pre-configuring GitLab settings"
+mkdir -p /etc/gitlab
+cat > /etc/gitlab/gitlab.rb <<EOF
+# GitLab configuration file
+# This file is managed by the gitlab-ce package
+# Any changes will be applied during package installation
+
+external_url '${EXTERNAL_URL}'
+EOF
+
+# Add SSL configuration if enabled
 if [[ "$ENABLE_SSL" =~ ^([yY][eE][sS]|[yY])$ ]]; then
-  msg_info "Configuring self-signed SSL certificate"
   cat >> /etc/gitlab/gitlab.rb <<EOF
 
 # SSL Configuration
@@ -82,15 +90,9 @@ nginx['redirect_http_to_https'] = true
 nginx['ssl_certificate'] = "/etc/gitlab/ssl/${IPADDRESS}.crt"
 nginx['ssl_certificate_key'] = "/etc/gitlab/ssl/${IPADDRESS}.key"
 EOF
-
-  msg_info "Reconfiguring GitLab for SSL"
-  gitlab-ctl reconfigure
-  msg_ok "HTTPS enabled with self-signed certificate"
-  msg_warn "Browsers will show security warning. Configure Let's Encrypt for trusted cert."
 fi
 
-# Optimize GitLab settings for LXC container (4GB RAM default)
-msg_info "Applying performance optimizations for LXC container"
+# Add performance tuning for 4GB RAM LXC container
 cat >> /etc/gitlab/gitlab.rb <<EOF
 
 # Performance Tuning for 4GB RAM LXC Container
@@ -100,24 +102,8 @@ gitaly['ruby_num_workers'] = 2
 postgresql['shared_buffers'] = "128MB"
 EOF
 
-gitlab-ctl reconfigure
-msg_ok "Performance optimizations applied"
-
-#########################
-#   EMAIL SETUP         #
-#########################
-echo
-msg_info "Email/SMTP Configuration (optional)"
-read -r -p "${TAB3}Do you want to configure email/SMTP now? [y/N]: " SETUP_EMAIL
-
+# Add email configuration if requested
 if [[ "$SETUP_EMAIL" =~ ^([yY][eE][sS]|[yY])$ ]]; then
-  read -r -p "${TAB3}SMTP server (e.g., smtp.gmail.com): " SMTP_SERVER
-  read -r -p "${TAB3}SMTP port (usually 587): " SMTP_PORT
-  read -r -p "${TAB3}SMTP username: " SMTP_USER
-  read -r -s -p "${TAB3}SMTP password: " SMTP_PASS
-  echo
-  read -r -p "${TAB3}From email address: " FROM_EMAIL
-
   cat >> /etc/gitlab/gitlab.rb <<EOF
 
 # Email Configuration
@@ -131,20 +117,97 @@ gitlab_rails['smtp_authentication'] = "login"
 gitlab_rails['smtp_enable_starttls_auto'] = true
 gitlab_rails['gitlab_email_from'] = "${FROM_EMAIL}"
 EOF
-
-  msg_info "Applying email configuration"
-  gitlab-ctl reconfigure
-  msg_ok "Email configured"
-else
-  msg_ok "Skipped email configuration (can be configured later)"
 fi
+
+msg_ok "GitLab pre-configured"
+
+#########################
+#   INSTALL GITLAB      #
+#########################
+msg_info "Installing GitLab Community Edition (this may take 5-10 minutes)"
+msg_info "GitLab omnibus includes PostgreSQL, Redis, Nginx, and all components"
+
+# Set Debian frontend to noninteractive to avoid prompts
+export DEBIAN_FRONTEND=noninteractive
+
+# Install GitLab CE package
+# The package will automatically run 'gitlab-ctl reconfigure' using our pre-configured gitlab.rb
+if ! apt-get install -y -o DPkg::Options::="--force-confold" gitlab-ce 2>&1 | tee /tmp/gitlab-install.log; then
+  msg_error "GitLab installation failed - check /tmp/gitlab-install.log for details"
+  exit 1
+fi
+
+msg_ok "GitLab package installed"
+
+# Verify installation succeeded
+if ! command -v gitlab-ctl &> /dev/null; then
+  msg_error "gitlab-ctl command not found - installation failed"
+  msg_info "Check /tmp/gitlab-install.log for errors"
+  exit 1
+fi
+
+msg_ok "GitLab installation verified"
 
 #########################
 #   SERVICE ENABLE      #
 #########################
-msg_info "Ensuring GitLab services are enabled"
-systemctl enable -q --now gitlab-runsvdir
-msg_ok "GitLab services enabled"
+msg_info "Verifying GitLab services"
+
+# Wait a moment for services to be created
+sleep 5
+
+# Check if gitlab-runsvdir service exists
+if ! systemctl list-unit-files | grep -q gitlab-runsvdir; then
+  msg_error "gitlab-runsvdir service not found - installation incomplete"
+  msg_info "Running manual reconfigure attempt..."
+  gitlab-ctl reconfigure
+fi
+
+# Enable and start GitLab services
+msg_info "Enabling GitLab services"
+if systemctl enable --now gitlab-runsvdir 2>&1; then
+  msg_ok "GitLab services enabled and started"
+else
+  msg_error "Failed to enable GitLab services"
+  msg_info "Check status with: gitlab-ctl status"
+  exit 1
+fi
+
+# Wait for services to start
+msg_info "Waiting for GitLab services to start (this may take 2-5 minutes)"
+sleep 15
+
+# Verify services are running
+if gitlab-ctl status | grep -q "run:"; then
+  msg_ok "GitLab services are running"
+else
+  msg_warn "Some GitLab services may not be running yet"
+  msg_info "Check status with: gitlab-ctl status"
+fi
+
+#########################
+#   FINAL VERIFICATION  #
+#########################
+msg_info "Running final verification"
+
+# Check if GitLab is responding
+RETRY_COUNT=0
+MAX_RETRIES=30
+
+while [ $RETRY_COUNT -lt $MAX_RETRIES ]; do
+  HTTP_CODE=$(curl -s -o /dev/null -w "%{http_code}" "http://localhost" 2>/dev/null || echo "000")
+  if echo "$HTTP_CODE" | grep -q "200\|302"; then
+    msg_ok "GitLab web interface is responding"
+    break
+  fi
+  RETRY_COUNT=$((RETRY_COUNT + 1))
+  sleep 10
+done
+
+if [ $RETRY_COUNT -eq $MAX_RETRIES ]; then
+  msg_warn "GitLab web interface not responding yet - may need more time to start"
+  msg_info "Monitor startup with: gitlab-ctl tail"
+fi
 
 #########################
 #   FINISH DISPLAY      #

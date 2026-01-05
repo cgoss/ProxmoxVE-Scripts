@@ -8,9 +8,16 @@ source <(curl -fsSL https://raw.githubusercontent.com/community-scripts/ProxmoxV
 
 APP="GitLab"
 var_tags="${var_tags:-git}"
-var_cpu="${var_cpu:-4}"
-var_ram="${var_ram:-8192}"
-var_disk="${var_disk:-20}"
+
+# Resource allocation based on expected usage:
+# Small (1-100 users):  2 CPU,  4GB RAM, 20GB disk
+# Medium (100-500):     4 CPU,  8GB RAM, 50GB disk
+# Large (500-1000):     8 CPU, 16GB RAM, 100GB disk
+# Enterprise (1000+):   16 CPU, 32GB RAM, 250GB disk
+
+var_cpu="${var_cpu:-4}"      # Medium installation
+var_ram="${var_ram:-8192}"   # Medium installation
+var_disk="${var_disk:-20}"   # Adjust based on expected repo size
 var_os="${var_os:-debian}"
 var_version="${var_version:-13}"  # Debian 13 (bookworm) – current stable base
 var_unprivileged="${var_unprivileged:-1}"
@@ -35,12 +42,50 @@ function update_script() {
     exit 1
   fi
 
+  # Check GitLab status before updating
+  msg_info "Checking GitLab health before update"
+  if ! gitlab-rake gitlab:check SANITIZE=true; then
+    msg_warn "GitLab health check failed. Review issues before updating."
+    read -r -p "Continue anyway? [y/N]: " CONTINUE
+    [[ ! "$CONTINUE" =~ ^([yY][eE][sS]|[yY])$ ]] && exit 0
+  fi
+  msg_ok "GitLab health check passed"
+
+  # Backup configuration
+  msg_info "Creating configuration backup"
+  $STD gitlab-ctl backup-etc
+  msg_ok "Configuration backed up"
+
+  # Update package list
   msg_info "Updating ${APP} package list"
   $STD apt-get update
 
-  msg_info "Upgrading GitLab packages"
-  $STD apt-get install -y --only-upgrade gitlab-ee gitlab-ce   # whichever is present will be upgraded
-  msg_ok "GitLab updated successfully!"
+  # Show available version
+  CURRENT=$(gitlab-rake gitlab:env:info | grep "GitLab information" -A 20 | grep "GitLab:" | awk '{print $2}')
+  AVAILABLE=$(apt-cache policy gitlab-ce gitlab-ee | grep Candidate | head -1 | awk '{print $2}')
+  msg_info "Current version: ${CURRENT}"
+  msg_info "Available version: ${AVAILABLE}"
+
+  if [ "$CURRENT" = "$AVAILABLE" ]; then
+    msg_ok "Already on latest version"
+    exit 0
+  fi
+
+  read -r -p "${TAB3}Proceed with upgrade to ${AVAILABLE}? [y/N]: " CONFIRM
+  [[ ! "$CONFIRM" =~ ^([yY][eE][sS]|[yY])$ ]] && exit 0
+
+  # Perform upgrade
+  msg_info "Upgrading GitLab (this may take several minutes)"
+  $STD apt-get install -y --only-upgrade gitlab-ee gitlab-ce
+  msg_ok "GitLab upgraded successfully!"
+
+  # Verify upgrade
+  msg_info "Running post-upgrade health check"
+  if gitlab-rake gitlab:check SANITIZE=true; then
+    msg_ok "Health check passed"
+  else
+    msg_warn "Post-upgrade health check reported issues. Review with 'gitlab-rake gitlab:check'"
+  fi
 
   exit 0
 }

@@ -73,7 +73,6 @@ fileserver File Server
 gallery Gallery
 gameserver Game Server
 gitea Gitea
-gitlab GitLab
 invoice-ninja Invoice Ninja
 mediaserver Media Server
 nextcloud Nextcloud

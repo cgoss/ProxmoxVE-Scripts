@@ -17,9 +17,9 @@ update_os
 #   PRE‑INSTALL WARN    #
 #########################
 msg_warn "WARNING: This script will add the official GitLab APT repository and install the"
-msg_warn "GitLab omnibus package (EE or CE). The installer script is maintained by GitLab, not"
-msg_warn "by this repository. Review the upstream installer if you have concerns."
-msg_custom "${TAB3}${GATEWAY}${BGN}${CL}" "\e[1;34m" "→  https://packages.gitlab.com/install/repositories/gitlab/gitlab-ee/script.deb.sh"
+msg_warn "GitLab Community Edition omnibus package. The installer script is maintained by"
+msg_warn "GitLab, not by this repository. Review the upstream installer if you have concerns."
+msg_custom "${TAB3}${GATEWAY}${BGN}${CL}" "\e[1;34m" "→  https://docs.gitlab.com/install/package/debian/"
 echo
 read -r -p "${TAB3}Do you want to continue? [y/N]: " CONFIRM
 if [[ ! "$CONFIRM" =~ ^([yY][eE][sS]|[yY])$ ]]; then
@@ -30,64 +30,16 @@ fi
 #########################
 #   DEPENDENCIES       #
 #########################
-msg_info "Installing prerequisite packages"
-$STD apt-get install -y curl ca-certificates gnupg2 lsb-release
+msg_info "Installing curl (required for repository setup)"
+$STD apt-get install -y curl
 msg_ok "Prerequisites installed"
 
 #########################
 #   GITLAB REPO SETUP  #
 #########################
-msg_info "Adding GitLab APT repository (CE edition)"
-# The upstream script can install either EE or CE; we request CE via the package name later
-curl -sSf https://packages.gitlab.com/install/repositories/gitlab/gitlab-ee/script.deb.sh | bash
+msg_info "Adding GitLab CE APT repository"
+curl -sSf https://packages.gitlab.com/install/repositories/gitlab/gitlab-ce/script.deb.sh | bash
 msg_ok "GitLab repository added"
-
-#########################
-#   DATABASE (PostgreSQL) #
-#########################
-msg_info "Setting up PostgreSQL (15) – required by GitLab"
-PG_VERSION="15" setup_postgresql
-msg_ok "PostgreSQL ready"
-
-#########################
-#   PERFORMANCE TUNING  #
-#########################
-msg_info "Applying GitLab performance tuning"
-
-# Tune PostgreSQL for GitLab workload (optimized for 4GB RAM default)
-cat > /etc/postgresql/15/main/conf.d/gitlab.conf <<EOF
-# GitLab Performance Tuning
-shared_buffers = 128MB
-effective_cache_size = 512MB
-maintenance_work_mem = 64MB
-checkpoint_completion_target = 0.9
-wal_buffers = 8MB
-default_statistics_target = 100
-random_page_cost = 1.1
-effective_io_concurrency = 200
-work_mem = 4MB
-min_wal_size = 512MB
-max_wal_size = 2GB
-EOF
-
-systemctl restart postgresql
-msg_ok "Performance tuning applied"
-
-#########################
-#   REDIS (optional)   #
-#########################
-msg_info "Installing Redis server (5) – required for Sidekiq"
-$STD apt-get install -y redis-server
-systemctl enable -q --now redis-server
-msg_ok "Redis installed and started"
-
-#########################
-#   INSTALL GITLAB      #
-#########################
-msg_info "Installing GitLab Community Edition"
-# The upstream repo provides both EE and CE packages; we install the CE meta‑package
-$STD apt-get install -y gitlab-ce
-msg_ok "GitLab packages installed"
 
 #########################
 #   CONFIGURATION       #
@@ -98,16 +50,30 @@ IPADDRESS=$(hostname -I | awk '{print $1}')
 #########################
 #   SSL CONFIGURATION   #
 #########################
-msg_info "SSL/HTTPS Configuration"
+echo
 read -r -p "${TAB3}Enable HTTPS with self-signed certificate? [y/N]: " ENABLE_SSL
 
 if [[ "$ENABLE_SSL" =~ ^([yY][eE][sS]|[yY])$ ]]; then
   EXTERNAL_URL="https://${IPADDRESS}"
+  msg_info "HTTPS will be configured with self-signed certificate"
+else
+  EXTERNAL_URL="http://${IPADDRESS}"
+  msg_info "HTTP will be used (not recommended for production)"
+fi
 
-  # Install certbot for future Let's Encrypt option
-  $STD apt-get install -y certbot
+#########################
+#   INSTALL GITLAB      #
+#########################
+msg_info "Installing GitLab Community Edition (this may take several minutes)"
+msg_info "GitLab omnibus includes PostgreSQL, Redis, Nginx, and all required components"
+EXTERNAL_URL="${EXTERNAL_URL}" apt-get install -y gitlab-ce
+msg_ok "GitLab packages installed"
 
-  # Configure for self-signed cert (GitLab will generate it)
+#########################
+#   POST-INSTALL CONFIG #
+#########################
+if [[ "$ENABLE_SSL" =~ ^([yY][eE][sS]|[yY])$ ]]; then
+  msg_info "Configuring self-signed SSL certificate"
   cat >> /etc/gitlab/gitlab.rb <<EOF
 
 # SSL Configuration
@@ -117,30 +83,32 @@ nginx['ssl_certificate'] = "/etc/gitlab/ssl/${IPADDRESS}.crt"
 nginx['ssl_certificate_key'] = "/etc/gitlab/ssl/${IPADDRESS}.key"
 EOF
 
+  msg_info "Reconfiguring GitLab for SSL"
+  gitlab-ctl reconfigure
   msg_ok "HTTPS enabled with self-signed certificate"
   msg_warn "Browsers will show security warning. Configure Let's Encrypt for trusted cert."
-else
-  EXTERNAL_URL="http://${IPADDRESS}"
-  msg_ok "Using HTTP (not recommended for production)"
 fi
 
-sed -i "s|^external_url .*|external_url '${EXTERNAL_URL}'|g" /etc/gitlab/gitlab.rb
-
-# Optimize GitLab settings for container (optimized for 4GB RAM default)
+# Optimize GitLab settings for LXC container (4GB RAM default)
+msg_info "Applying performance optimizations for LXC container"
 cat >> /etc/gitlab/gitlab.rb <<EOF
 
-# Performance Tuning
-postgresql['shared_buffers'] = "128MB"
+# Performance Tuning for 4GB RAM LXC Container
 puma['worker_processes'] = 2
 sidekiq['max_concurrency'] = 10
 gitaly['ruby_num_workers'] = 2
+postgresql['shared_buffers'] = "128MB"
 EOF
+
+gitlab-ctl reconfigure
+msg_ok "Performance optimizations applied"
 
 #########################
 #   EMAIL SETUP         #
 #########################
-msg_info "Configuring email notifications (optional)"
-read -r -p "${TAB3}Do you want to configure email/SMTP? [y/N]: " SETUP_EMAIL
+echo
+msg_info "Email/SMTP Configuration (optional)"
+read -r -p "${TAB3}Do you want to configure email/SMTP now? [y/N]: " SETUP_EMAIL
 
 if [[ "$SETUP_EMAIL" =~ ^([yY][eE][sS]|[yY])$ ]]; then
   read -r -p "${TAB3}SMTP server (e.g., smtp.gmail.com): " SMTP_SERVER
@@ -164,21 +132,19 @@ gitlab_rails['smtp_enable_starttls_auto'] = true
 gitlab_rails['gitlab_email_from'] = "${FROM_EMAIL}"
 EOF
 
+  msg_info "Applying email configuration"
+  gitlab-ctl reconfigure
   msg_ok "Email configured"
 else
   msg_ok "Skipped email configuration (can be configured later)"
 fi
 
-msg_info "Reconfiguring GitLab (runs omnibus‑runner, creates DB, etc.)"
-gitlab-ctl reconfigure
-msg_ok "GitLab reconfigured"
-
 #########################
 #   SERVICE ENABLE      #
 #########################
-msg_info "Enabling GitLab service"
+msg_info "Ensuring GitLab services are enabled"
 systemctl enable -q --now gitlab-runsvdir
-msg_ok "GitLab service started"
+msg_ok "GitLab services enabled"
 
 #########################
 #   FINISH DISPLAY      #
@@ -188,34 +154,36 @@ msg_ok "GitLab installed successfully"
 # Extract and display the initial root password
 if [ -f /etc/gitlab/initial_root_password ]; then
   INITIAL_PASSWORD=$(grep 'Password:' /etc/gitlab/initial_root_password | cut -d' ' -f2)
+  echo
   echo -e "${INFO}${YW} Initial Login Credentials:${CL}"
   echo -e "${TAB}${GATEWAY}${BGN}Username: root${CL}"
   echo -e "${TAB}${GATEWAY}${BGN}Password: ${INITIAL_PASSWORD}${CL}"
-  echo -e ""
+  echo
   echo -e "${WARN}${RD}IMPORTANT: This password file will be deleted in 24 hours!${CL}"
   echo -e "${INFO}${YW}Please log in and change your password immediately.${CL}"
-  echo -e ""
+  echo
 fi
 
 echo -e "${INFO}${YW} GitLab Web Interface:${CL}"
 echo -e "${TAB}${GATEWAY}${BGN}${EXTERNAL_URL}${CL}"
-echo -e ""
-echo -e "${INFO}${YW} Initial setup may take 2-5 minutes. Wait for the login page.${CL}"
-echo -e ""
+echo
+echo -e "${INFO}${YW} GitLab may take 2-5 minutes to fully start. Wait for the login page.${CL}"
+echo
 echo -e "${INFO}${YW} Next Steps:${CL}"
 echo -e "${TAB}1. Log in and change the root password${CL}"
 echo -e "${TAB}2. Create additional admin/user accounts${CL}"
-echo -e "${TAB}3. Configure CI/CD by installing GitLab Runner (separate script)${CL}"
-echo -e "${TAB}4. Set up email notifications for password resets${CL}"
-echo -e ""
+echo -e "${TAB}3. Configure CI/CD runners if needed${CL}"
+echo -e "${TAB}4. Review email settings for notifications${CL}"
+echo
 echo -e "${INFO}${YW} Useful Commands:${CL}"
 echo -e "${TAB}gitlab-ctl status          # Check service status${CL}"
 echo -e "${TAB}gitlab-ctl tail            # View logs${CL}"
-echo -e "${TAB}gitlab-rake gitlab:check   # Health check${CL}"
-echo -e "${TAB}gitlab-ctl backup-etc      # Backup configuration${CL}"
-echo -e ""
+echo -e "${TAB}gitlab-rake gitlab:check   # Run health check${CL}"
+echo -e "${TAB}gitlab-ctl reconfigure     # Apply configuration changes${CL}"
+echo -e "${TAB}gitlab-ctl restart         # Restart all services${CL}"
+echo
 echo -e "${INFO}${YW} NOTE: Monitor disk usage as repositories grow.${CL}"
-echo -e "${TAB}Use 'df -h' and consider expanding if usage exceeds 80%.${CL}"
+echo -e "${TAB}Use 'df -h' to check disk space regularly.${CL}"
 
 #########################
 #   CUSTOM MOTD         #

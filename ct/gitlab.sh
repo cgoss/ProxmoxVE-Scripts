@@ -10,16 +10,17 @@ APP="GitLab"
 var_tags="${var_tags:-git}"
 
 # Resource allocation based on expected usage:
-# Small (1-100 users):  2 CPU,  4GB RAM, 20GB disk
+# Minimum (1-5 users):  1 CPU,  2GB RAM, 10GB disk (memory-constrained)
+# Small (5-100 users):  2 CPU,  4GB RAM, 20GB disk
 # Medium (100-500):     4 CPU,  8GB RAM, 50GB disk
 # Large (500-1000):     8 CPU, 16GB RAM, 100GB disk
 # Enterprise (1000+):   16 CPU, 32GB RAM, 250GB disk
 
-var_cpu="${var_cpu:-4}"      # Medium installation
-var_ram="${var_ram:-8192}"   # Medium installation
+var_cpu="${var_cpu:-2}"      # Small installation (default)
+var_ram="${var_ram:-4096}"   # Small installation (default)
 var_disk="${var_disk:-20}"   # Adjust based on expected repo size
 var_os="${var_os:-debian}"
-var_version="${var_version:-13}"  # Debian 13 (bookworm) – current stable base
+var_version="${var_version:-12}"  # Debian 12 (bookworm) – stable and GitLab-supported
 var_unprivileged="${var_unprivileged:-1}"
 var_nesting="${var_nesting:-1}"  # needed for Docker‑in‑LXC (GitLab uses Docker‑like services)
 

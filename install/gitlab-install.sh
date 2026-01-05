@@ -54,20 +54,20 @@ msg_ok "PostgreSQL ready"
 #########################
 msg_info "Applying GitLab performance tuning"
 
-# Tune PostgreSQL for GitLab workload
+# Tune PostgreSQL for GitLab workload (optimized for 4GB RAM default)
 cat > /etc/postgresql/15/main/conf.d/gitlab.conf <<EOF
 # GitLab Performance Tuning
-shared_buffers = 256MB
-effective_cache_size = 1GB
+shared_buffers = 128MB
+effective_cache_size = 512MB
 maintenance_work_mem = 64MB
 checkpoint_completion_target = 0.9
-wal_buffers = 16MB
+wal_buffers = 8MB
 default_statistics_target = 100
 random_page_cost = 1.1
 effective_io_concurrency = 200
-work_mem = 8MB
-min_wal_size = 1GB
-max_wal_size = 4GB
+work_mem = 4MB
+min_wal_size = 512MB
+max_wal_size = 2GB
 EOF
 
 systemctl restart postgresql
@@ -126,11 +126,11 @@ fi
 
 sed -i "s|^external_url .*|external_url '${EXTERNAL_URL}'|g" /etc/gitlab/gitlab.rb
 
-# Optimize GitLab settings for container
+# Optimize GitLab settings for container (optimized for 4GB RAM default)
 cat >> /etc/gitlab/gitlab.rb <<EOF
 
 # Performance Tuning
-postgresql['shared_buffers'] = "256MB"
+postgresql['shared_buffers'] = "128MB"
 puma['worker_processes'] = 2
 sidekiq['max_concurrency'] = 10
 gitaly['ruby_num_workers'] = 2
